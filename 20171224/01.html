@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>devicemotion</title>
+    <title>device orientation | ジャイロのテスト</title>
 </head>
 <body>
-    <h1>devicemotionのテスト</h1>
+    <h1>device orientation | ジャイロのテスト</h1>
     <ul>
         <li></li>
         <li></li>
@@ -19,30 +19,47 @@
 
         console.log('読み込んだよ');
 
-        // devicemotion event
-        window.addEventListener('devicemotion',shakeDevice);
+        // // devicemotion event
+        // window.addEventListener('devicemotion',shakeDevice);
+
+        // devicemotion event jyro
+        window.addEventListener('devicemotion',orienDevice);
 
         // スマホを振ったら呼び出される関数
-        function shakeDevice(evt){
+        function orienDevice(evt){
             console.log(evt);
             // X軸
-            var x = evt.acceleration.x;
+            var x = evt.beta;
             // Y軸
-            var y = evt.acceleration.y;
+            var y = evt.gamma;
             // Z軸
-            var z = evt.acceleration.z;
+            var z = evt.alpha;
 
             $('ul li:eq(0)').text('x: ' + x);
             $('ul li:eq(1)').text('y: ' + y);
             $('ul li:eq(2)').text('z: ' + z);
 
-            // スマホを振ったら
-            if(  Math.abs(x) > 10 || Math.abs(y)>10 || Math.abs(z)>10 ){
-                $('h1').text('振り終わったよ');
-                // alert('振り終わったよ');
+        // // スマホを振ったら呼び出される関数
+        // function shakeDevice(evt){
+        //     console.log(evt);
+        //     // X軸
+        //     var x = evt.acceleration.x;
+        //     // Y軸
+        //     var y = evt.acceleration.y;
+        //     // Z軸
+        //     var z = evt.acceleration.z;
+        //
+        //     $('ul li:eq(0)').text('x: ' + x);
+        //     $('ul li:eq(1)').text('y: ' + y);
+        //     $('ul li:eq(2)').text('z: ' + z);
 
-
-                window.removeEventListener('devicemotion', shakeDevice);
+            // // スマホを振ったら
+            // if(  Math.abs(x) > 10 || Math.abs(y)>10 || Math.abs(z)>10 ){
+            //     $('h1').text('振り終わったよ');
+            //     // alert('振り終わったよ');
+            //
+            //
+            //     window.removeEventListener('devicemotion', shakeDevice);
             }
         }
 
