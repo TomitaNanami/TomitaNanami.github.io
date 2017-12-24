@@ -21,6 +21,16 @@
             // devicemotion event
             window.addEventListener('devicemotion',function(evt){
                 console.log(evt);
+                // x軸
+                var x = evt.acceleration.x;
+                // y軸
+                var y = evt.acceleration.y;
+                // z軸
+                var z = evt.acceleration.z;
+
+                $('ul li:eq(0)').text('x:' + x);
+                $('ul li:eq(1)').text('y:' + y);
+                $('ul li:eq(2)').text('z:' + z);
             });
 
         });
