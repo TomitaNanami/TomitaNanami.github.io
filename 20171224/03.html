@@ -7,11 +7,11 @@
 </head>
 <body>
     <h1>geolocation | GPSのテスト</h1>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <dl id="weatherMap">
+        <dt>地域名：</dt>
+        <dd id="areaName"></dd>
+
+    </dl>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
     // DOMの読み込み
@@ -22,7 +22,50 @@
         // GPSからの緯度経度の取得
         navigator.geolocation.getCurrentPosition(function(pos){
             console.log(pos);
+
+            var lat = pos.coords.latitude;  // 緯度
+            var lon = pos.coords.longitude;  // 経度
+
+            lat = calLocation(lat);
+            lon = calLocation(lon);
+            console.log('lat' + lat, 'lon' + lon);
+
+            setWeather(lat,lon);  //緯度経度を受け渡しする
+
         });
+
+
+        // 天気を表示する関数
+        function setWeather(lat,lon){
+
+            // OpenWeatherMap APIキー (定数)
+            const apikey ='c7c01265b75c7fd3904182d42022ff63';
+            // OpenWeatherMap用のURL
+            var weatherUrl ='http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apikey;
+
+            //ajax通信
+            $.ajax({
+                url:weatherUrl,
+                dataType:'json'
+            }).done(function(data){
+                console.log(data);
+
+                // 地域名
+                var areaName = data.name;
+                $('#areaName').text(areaName);
+
+            }).fail(function(){
+                console.log('ajax error');
+            });
+
+        }
+
+        // 少数第二位までで切り捨てる
+        function calLocation(num){
+            var numA = num*100;  // 2桁上げる
+            numA = Math.floor(numA)/100;  // 切り捨てて2桁下げる
+            return numA;
+        }
 
 
     });
