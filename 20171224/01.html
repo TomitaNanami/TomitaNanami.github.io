@@ -40,7 +40,7 @@
 
             // スマホを振ったら
             if ( Math.abs(x) > 10 || Math.abs(y) || Math.abs(z) ){
-                &('h1').text('振り終わったよ');
+                $('h1').text('振り終わったよ');
                 window.removeEventListener('devicemotion' , shakeDevice);
             }
 
