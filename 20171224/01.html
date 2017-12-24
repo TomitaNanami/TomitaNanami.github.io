@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>devicemotion</title>
 </head>
 <body>
@@ -15,38 +14,42 @@
     </ul>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        // DOMの読み込み
-        $(function(){
+    // DOMの読み込み
+    $(function(){
 
-        });
+        console.log('読み込んだよ');
+
+        // devicemotion event
+        window.addEventListener('devicemotion',shakeDevice);
 
         // スマホを振ったら呼び出される関数
         function shakeDevice(evt){
-            console.log('読み込んだよ');
-            // devicemotion event
-            window.addEventListener('devicemotion',shakeDevice);
-                console.log(evt);
-                // x軸
-                var x = evt.acceleration.x;
-                // y軸
-                var y = evt.acceleration.y;
-                // z軸
-                var z = evt.acceleration.z;
+            console.log(evt);
+            // X軸
+            var x = evt.acceleration.x;
+            // Y軸
+            var y = evt.acceleration.y;
+            // Z軸
+            var z = evt.acceleration.z;
 
-                $('ul li:eq(0)').text('x:' + x);
-                $('ul li:eq(1)').text('y:' + y);
-                $('ul li:eq(2)').text('z:' + z);
-
+            $('ul li:eq(0)').text('x: ' + x);
+            $('ul li:eq(1)').text('y: ' + y);
+            $('ul li:eq(2)').text('z: ' + z);
 
             // スマホを振ったら
-            if ( Math.abs(x) > 10 || Math.abs(y) > 10 || Math.abs(z) > 10 ){
+            if(  Math.abs(x) > 10 || Math.abs(y)>10 || Math.abs(z)>10 ){
                 $('h1').text('振り終わったよ');
-                window.removeEventListener('devicemotion' , shakeDevice);
+                // alert('振り終わったよ');
+
+
+                window.removeEventListener('devicemotion', shakeDevice);
             }
+        }
 
 
 
-        });
+
+    });
     </script>
 </body>
 </html>
