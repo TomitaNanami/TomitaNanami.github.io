@@ -1,0 +1,417 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+    background-color: #FFF;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+
+
+/* header------------------------------------ */
+.header-container{
+    position: fixed;
+    width: 100%;
+    height: 124px;
+    top: 0;
+    left: 0;
+    z-index: 270;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+header h1{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 84px;
+}
+header h1 img{
+    width: 198px;
+    height: 24px;
+}
+.menu{
+    width: 21px;
+    height: 14px;
+    position: absolute;
+    top: 28px;
+    right: 72px;
+}
+.menu img{
+    width: 21px;
+    height: 14px;
+}
+
+/* side bar */
+.header-left{
+    position: absolute;
+    left: 0;
+    top: 246px;
+    left: 84px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 250px;
+    right: 75px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
+
+
+
+
+
+.otherCategory{
+    width: 1008px;
+    height: 1196px;
+    position: relative;
+    margin: 0 auto;
+    top: 170px;
+}
+.other-title{
+    width: 100%;
+    height: 122px;
+}
+.other-title img{
+    width: 210px;
+    height: 38px;
+}
+
+.first-container {
+    width: 1008px;
+    height: 450px;
+}
+.first-line{
+    width: 1004px;
+    height: 315px;
+    display: flex;
+    justify-content: space-between;
+}
+.first-img{
+    width: 315px;
+    height: 315px;
+}
+.second-img{
+    width: 315px;
+    height: 315px;
+}
+.third-img{
+    width: 315px;
+    height: 315px;
+}
+.first-img img{
+    width: 315px;
+    height: 315px;
+}
+.second-img img{
+    width: 315px;
+    height: 315px;
+}
+.third-img img{
+    width: 315px;
+    height: 315px;
+}
+
+.second-container {
+    width: 1008px;
+    height: 450px;
+    margin-top: 45px;
+}
+.fourth-line{
+    width: 1004px;
+    height: 315px;
+    display: flex;
+    justify-content: space-between;
+}
+.fourth-img{
+    width: 315px;
+    height: 315px;
+}
+.fifth-img{
+    width: 315px;
+    height: 315px;
+}
+.sixth-img{
+    width: 315px;
+    height: 315px;
+}
+.fourth-img img{
+    width: 315px;
+    height: 315px;
+}
+.fifth-img img{
+    width: 315px;
+    height: 315px;
+}
+.sixth-img img{
+    width: 315px;
+    height: 315px;
+}
+
+
+
+
+.txt-container-one{
+    font-family: 'Allerta', sans-serif;
+    width: 1004px;
+    height: 115px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: flex-end;
+}
+.first-txt{
+    width: 326px;
+    height: 50px;
+    text-align: right;
+}
+.second-txt{
+    width: 345px;
+    height: 50px;
+    text-align: right;
+}
+.third-txt{
+    width: 345px;
+    height: 50px;
+    text-align: right;
+}
+.first-title{
+    font-size: 20px;
+}
+.first-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+.second-title{
+    font-size: 20px;
+}
+.second-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+.third-title{
+    font-size: 20px;
+}
+.third-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+
+
+.txt-container-two{
+    font-family: 'Allerta', sans-serif;
+    width: 1004px;
+    height: 115px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: flex-end;
+}
+.fourth-txt{
+    width: 326px;
+    height: 50px;
+    text-align: right;
+    margin-left: -12px;
+}
+.fifth-txt{
+    width: 345px;
+    height: 50px;
+    text-align: right;
+}
+.sixth-txt{
+    width: 345px;
+    height: 50px;
+    text-align: right;
+}
+.fourth-title{
+    font-size: 20px;
+}
+.fourth-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+.fifth-title{
+    font-size: 20px;
+}
+.fifth-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+.sixth-title{
+    font-size: 20px;
+}
+.sixth-caption{
+    font-size: 12pt;
+    margin-top: 15px;
+}
+
+
+
+/* footer---------- */
+.footer{
+    width: 100%;
+    height: 309px;
+    margin-top: 100px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+.footer-right-container{
+    width: 240px;
+}
+.footer-right{
+    width: 100%;
+    float: right;
+    margin-right: 138px;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 14pt;
+}
+.menuPuzzle{
+    position: absolute;
+    margin-top: 68px;
+    right: 138px;
+}
+.menuHome{
+    position: absolute;
+    margin-top: 90px;
+    right: 138px;
+}
+/* .menuHome img{
+    width: 30px;
+    height: 9px;
+} */
+.menuWebApp{
+    position: absolute;
+    margin-top: 111px;
+    right: 138px;
+}
+/* .menuWebApp img{
+    width: 52px;
+    height: 9px;
+} */
+.menuGame{
+    position: absolute;
+    margin-top: 132px;
+    right: 138px;
+}
+/* .menuGame img{
+    width: 29px;
+    height: 9px;
+} */
+.menuGraphic{
+    position: absolute;
+    margin-top: 153px;
+    right: 138px;
+}
+/* .menuGraphic img{
+    width: 46px;
+    height: 9px;
+} */
+.menuOther{
+    position: absolute;
+    margin-top: 174px;
+    right: 138px;
+}
+/* .menuOther img{
+    width: 36px;
+    height: 9px;
+} */
+.copyright{
+    position: absolute;
+    margin-top: 226px;
+    right: 138px;
+}
+/* .copyright img{
+    width: 180px;
+    height: 9px;
+} */
+
+.footer-left-container{
+    width: 280px;
+}
+.footer-left{
+    width: 100%;
+    float: left;
+    margin-left: 138px;
+    margin-top: 67px;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 14pt;
+}
+.myName{
+    margin-bottom: 12px;
+}
+.myBirthDay{
+    margin-bottom: 12px;
+}
+.carrier{
+    margin-bottom: 12px;
+}

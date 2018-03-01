@@ -1,0 +1,150 @@
+#slider1 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+#slider2 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+#slider3 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+#slider4 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+#slider5 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+#slider6 {
+    /* margin-left: 100px; */
+	position: relative;
+	overflow: hidden;
+	width: 550px;
+	height: 212px;
+    /* border: 1px solid #0F0; */
+}
+
+
+
+
+#photos1 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+#photos2 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+#photos3 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+#photos4 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+#photos5 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+#photos6 {
+	position: absolute;
+    left: 0;
+	width: 3300px;
+    /* opacity: 0; */
+}
+
+
+
+
+.slider ul {
+    width: 1650px;
+	float: left;
+}
+.slider li {
+	float: left;
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX0{
+    animation-name: trX0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX1{
+    animation-name: trX1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX2{
+    animation-name: trX2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes trX0 {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(-550px);
+    }
+}
+@keyframes trX1 {
+    0%{
+        transform: translateX(-550px);
+
+    }
+    100%{
+        transform: translateX(-1100px);
+    }
+}
+@keyframes trX2 {
+    0%{
+        transform: translateX(-1100px);
+
+    }
+    100%{
+        transform: translateX(-1650px);
+    }
+}

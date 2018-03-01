@@ -1,0 +1,72 @@
+/* common---------- */
+header{
+    width: 1140px;
+    height: 434px;
+    margin: 26px auto 0px;
+}
+.top_class{
+    width: 1140px;
+    height: 25px;
+    /* overflow: hidden; */
+    display: flex;
+}
+.ti_me{
+    width: 1140px;
+    height: 25px;
+}
+h1{
+    width: 200px;
+    height: 25px;
+    text-align: left;
+    float: left;
+}
+h1 img{
+    width: 200px;
+    height: 25px;
+}
+.menu{
+    float: right;
+    text-align: right;
+}
+.menu img{
+    width: 21px;
+    height: 14px;
+}
+.header-left{
+    width: 10px;
+    height: 217px;
+}
+
+.heaer-right{
+    width: 17px;
+    height: 220px;
+}
+.heaer-right ul{
+    width: 17px;
+    height: 220px;
+}
+.facebook{
+    width: 8px;
+    height: 14px;
+    margin: 0 auto;
+}
+.behance{
+    width: 17px;
+    height: 11px;
+    margin: 15px auto 16px;
+}
+.youtube{
+    width: 16px;
+    height: 12px;
+    margin: 0 auto;
+}
+.bar{
+    width: 2px;
+    height: 41px;
+    margin: 23px auto 18px;
+}
+.contact{
+    width: 9px;
+    height: 68px;
+    margin: 0 auto;
+}

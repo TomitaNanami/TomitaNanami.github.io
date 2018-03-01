@@ -1,0 +1,134 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+    background-color: #FFF;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+
+
+/* common header---------- */
+header{
+    width: 100%;
+    height: 50px;
+    /* background: url(../img/02_home/topView.jpg)  left top no-repeat;
+    background-size: 917px 691px; */
+    position: relative; /* ポジション指定の基点 */
+}
+header h1{
+    width: 198px;
+    height: 24px;
+    position: fixed;; /* ポジション絶対配置 */
+    z-index: 4;
+    margin-top: 26px;
+    margin-left: 70px;
+}
+header h1 img{
+    width: 198px;
+    height: 24px;
+}
+.menu{
+    width: 93px;
+    height: 45px;
+    position: fixed;
+    z-index: 4;
+    right: 0%;
+}
+.menu img{
+    width: 21px;
+    height: 14px;
+    margin-top: 28px;
+    margin-right: 72px
+}
+
+
+.contents{
+    width: 100%;
+    height: 835px;
+    position: relative;
+}
+.header-left{
+    position: fixed;
+    z-index: 4;
+    margin-top: 195px;
+    left: 70px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: fixed;
+    z-index: 4;
+    margin-top: 200px;
+    right: 70px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+    position: fixed;
+    z-index: 4;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: fixed;
+    z-index: 4;
+    margin: 0 4px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: fixed;
+    z-index: 4;
+    margin: 28px 0px 5px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: fixed;
+    z-index: 4;
+    margin: 60px 0px 0px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: fixed;
+    z-index: 4;
+    margin: 94px 8px 0px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: fixed;
+    z-index: 4;
+    margin: 152px 5px 0px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
