@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="stage" width="500" height="500"></canvas>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+
+    //DOMの読み込み
+    $(function(){
+        //canvasの取得
+        var stage = new createjs.Stage('stage');
+
+        //図形の描画
+        //circle変数の中に図形の描画機能を入れる
+        var circle = new createjs.Shape();
+        circle.graphics.beginFill('#00FF00').drawCircle(0,0,40);
+        stage.addChild(circle);  //stageにcircleを配置(必須)
+        circle.x = 50;
+        circle.y = 50;
+
+        //tweenアニメーション
+        createjs.Tween.get(circle)
+        .to({x:400,y:400,alpha:0.1},1000,createjs.Ease.cubicIn)
+        .wait(500)
+        .to({x:400,y:50,alpha:1},500,createjs.Ease.bounceOut)
+        .wait(1000)
+        .to({x:50,y:50,scaleX:2,scaleY:2},400,createjs.Ease.backOut)
+        .call();
+
+        function nextAnime(){
+            console.log('next animation');
+            circle.scaleX = 1;
+            circle.scaleY = 1;
+        }
+
+
+
+
+        var star = new createjs.Shape();
+        star.graphics.beginFill('#FF0000').drawPolyStar(0,0,40,5,0.6,-90);
+        stage.addChild(star);
+        star.x = stage.canvas.width/2;
+        star.y = stage.canvas.height/2;
+
+        var rect = new createjs.Shape();
+        rect.graphics.beginFill('#0000FF').drawRect(0,0,50,50);
+        stage.addChild(rect);
+        rect.x = 400;
+        rect.y = 0;
+        rect.alpha = 0.5;
+        //rect.visible = false;  //非表示
+
+
+        createjs.Ticker.addEventListener('tick',tick);
+        //requestAnimationFrameの実行
+        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+
+        function tick(){
+            // circle.x += 5;
+            // if(circle.x > stage.canvas.width){
+            //     circle.x = 0;
+            // }
+
+
+
+            star.rotation += 5;
+            if(circle.x > stage.canvas.width){
+                circle.x = 0;
+            }
+
+            rect.y += 5;
+            if(rect.y > stage.canvas.height){
+                rect.y = 0;
+            }
+
+            stage.update();  //描画の更新(必須)
+        }
+
+
+
+    });
+    </script>
+</body>
+</html>

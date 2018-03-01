@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="stage" width="700" height="500"></canvas>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="sprite.js"></script>
+    <script>
+
+    //DOMの読み込み
+    $(function(){
+        //canvasの取得
+        var stage = new createjs.Stage('stage');
+
+        //画像の登録
+        var manifest = [
+            {src:'img/tomato.png'},
+            {src:'img/calcium.png'}
+        ];
+
+        //loadQueue プリロード
+        var loadQueue = new createjs.LoadQueue();
+        //ファイルの指定 読み込み開始
+        loadQueue.loadManifest(manifest);
+
+        //画像を全部読み込み終わったら
+        loadQueue.addEventListener('complete',function(){
+            console.log('読み込み完了');
+            addstage();
+        });
+
+        //ステージに配置
+        function addstage(){
+            var tomato = new createjs.Bitmap(manifest[0].src);
+            stage.addChild(tomato);
+            tomato.x = 100;
+            tomato.y = 100;
+            tomato.alpha = 0;
+            createjs.Tween.get(tomato).wait(500).to({alpha:1},1000);
+
+            // //sprite
+            // var calciumSpriteSheet = new createjs.SpriteSheet(calciumSprite);
+            // var calcium = new createjs.Sprite(calciumSpriteSheet,'stand');
+            // stage.addChild(calcium);
+            // calcium.x = 0;
+            // calcium.y = 300;
+            // calcium.alpha = 0;
+            // createjs.Tween.get(calcium).wait(1000).to({alpha:1},1000);
+            // //クリックしたら
+            // calcium.addEventListener('click',function(){
+            //     createjs.Tween.get(calcium).call(calciumWalk).to({x:500},2000).call(ccalciumStop);
+            // })
+            //
+            // function calciumWalk(){
+            //     calcium.gotoAndPlay('walk');
+            // }
+            // function calciumStop(){
+            //     calcium.gotoAndPlay('stop');
+            // }
+
+
+        }
+
+
+
+        // createjs.Ticker.addEventListener('tick',tick);
+        //requestAnimationFrameの実行
+        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+        createjs.Ticker.setFPS(30);
+
+        createjs.Ticker.addEventListener('tick',function(){
+
+        // tomato.rotation += 5;
+
+            tomato.rotation++;
+        // if(circle.x > stage.canvas.width){
+        //     circle.x = 0;
+        // }
+
+
+
+            stage.update();  //描画の更新(必須)
+        })
+
+
+
+    });
+    </script>
+</body>
+</html>

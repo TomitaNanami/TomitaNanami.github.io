@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="stage" width="500" height="500"></canvas>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+
+    //DOMの読み込み
+    $(function(){
+        //canvasの取得
+        var stage = new createjs.Stage('stage');
+
+        //図形の描画
+        //circle変数の中に図形の描画機能を入れる
+        var circle = new createjs.Shape();
+        circle.graphics.beginFill('#00FF00').drawCircle(0,0,40);
+        stage.addChild(circle);  //stageにcircleを配置(必須)
+        circle.x = 200;
+        circle.y = 300;
+
+        var star = new createjs.Shape();
+        star.graphics.beginFill('#FF0000').drawPolyStar(0,0,40,5,0.6,-90);
+        stage.addChild(star);
+        star.x = stage.canvas.width/2;
+        star.y = stage.canvas.height/2;
+
+
+        createjs.Ticker.addEventListener('tick',tick);
+        //requestAnimationFrameの実行
+        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+
+
+        function tick(){
+            circle.x += 5;
+
+            if(circle.x > stage.canvas.width){
+                circle.x = 0;
+            }
+
+            star.rotation += 5;
+            if(star.rotation >= 360){
+                star.rotation = 0;
+            }
+
+            stage.update();  //描画の更新
+        }
+
+
+
+    });
+
+    </script>
+</body>
+</html>
