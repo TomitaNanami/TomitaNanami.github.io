@@ -1,0 +1,376 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+    background-color: #FFF;
+}
+a{
+    color:#FFF;
+    text-decoration: none;
+}
+
+
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.menu{
+    width: 100%;
+    height: 700px;
+    background: #000;
+}
+.menuImg{
+    display: block;
+    position: absolute;
+    right: 72px;
+    top: 28px;
+}
+.menuImg img{
+    width: 21px;
+    height: 14px;
+}
+
+nav{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menuOpen{
+    display: block;
+    z-index: 500;
+}
+.nav-container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* h1{
+    width: 198px;
+    height: 24px;
+    position: fixed;
+    z-index: 501;
+    top: 26px;
+    left: 70px;
+}
+h1 img{
+    width: 198px;
+    height: 24px;
+} */
+
+.menuClose{
+    display: block;
+    position: absolute;
+    right: 72px;
+    top: 28px;
+    width: 22px;
+    height: auto;
+}
+.menuClose img{
+    width: 22px;
+    height: 22px;
+}
+
+
+
+.menuTitle{
+    width: 100%;
+    float: none;
+    display: block;
+}
+/* nav ul li a{
+    display: block;
+    height: auto;
+    text-align: center;
+} */
+
+.top img{
+    display: block;
+    width: 141px;
+    height: 14px;
+    margin: 0 auto;
+}
+.home img{
+    display: block;
+    width: 64px;
+    height: 14px;
+    margin: 0 auto;
+}
+.webApp img{
+    display: block;
+    width: 121px;
+    height: 13px;
+    margin: 0 auto;
+}
+.game img{
+    display: block;
+    width: 63px;
+    height: 14px;
+    margin: 0 auto;
+}
+.graphic img{
+    display: block;
+    width: 95px;
+    height: 14px;
+    margin: 0 auto;
+}
+.other img{
+    display: block;
+    width: 74px;
+    height: 14px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .menu-open{
+        display: block;
+        z-index: 200;
+    }
+
+
+
+
+
+
+
+.menu{
+    width: 93px;
+    height: 45px;
+    position: fixed;
+    z-index: 1;
+    right: 0%;
+}
+.menu img{
+    width: 21px;
+    height: 14px;
+    margin-top: 28px;
+    margin-right: 72px
+}
+
+
+nav{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.98);
+    position: relative;
+}
+nav h1{
+    width: 198px;
+    height: 24px;
+    position: fixed;
+    z-index: 4;
+    margin-top: 26px;
+    margin-left: 70px;
+}
+nav h1 img{
+    width: 198px;
+    height: 24px;
+}
+.menuClose {
+    width: 93px;
+    height: 45px;
+    position: fixed;
+    z-index: 4;
+    right: 0%;
+}
+.menuClose img{
+    width: 22px;
+    height: 22px;
+    margin-top: 28px;
+    margin-right: 72px
+}
+
+
+
+.contents{
+    width: 100%;
+    height: 728px;
+    position: relative;
+}
+.header-left{
+    position: fixed;
+    z-index: 4;
+    margin-top: 243px;
+    left: 70px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: fixed;
+    z-index: 4;
+    margin-top: 250px;
+    right: 70px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+    position: fixed;
+    z-index: 4;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: fixed;
+    z-index: 4;
+    margin: 0 4px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: fixed;
+    z-index: 4;
+    margin: 28px 0px 5px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: fixed;
+    z-index: 4;
+    margin: 60px 0px 0px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: fixed;
+    z-index: 4;
+    margin: 94px 8px 0px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: fixed;
+    z-index: 4;
+    margin: 152px 5px 0px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
+
+
+.menuTitle{
+    width: 100%;
+    height: 339px;
+    padding-top: 200px;
+}
+.top {
+    width: 141px;
+    height: 14px;
+    margin: 0 auto 45px;
+}
+.home {
+    width: 64px;
+    height: 14px;
+    margin: 0 auto 45px;
+}
+.webApp {
+    width: 121px;
+    height: 13px;
+    margin: 0 auto 45px;
+}
+.game {
+    width: 63px;
+    height: 14px;
+    margin: 0 auto 45px;
+}
+.graphic {
+    width: 95px;
+    height: 14px;
+    margin: 0 auto 45px;
+}
+.other {
+    width: 74px;
+    height: 14px;
+    margin: 0 auto;
+}
+
+
+
+.top img{
+    width: 141px;
+    height: 14px;
+}
+.home img{
+    width: 64px;
+    height: 14px;
+}
+.webApp img{
+    width: 121px;
+    height: 13px;
+}
+.game img{
+    width: 63px;
+    height: 14px;
+}
+.graphic img{
+    width: 95px;
+    height: 14px;
+}
+.other img{
+    width: 74px;
+    height: 14px;
+} */

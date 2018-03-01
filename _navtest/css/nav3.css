@@ -1,0 +1,234 @@
+/* Common Style -------------------------- */
+body{
+    font-size:14px;
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+    background-color: #F4F4F4;
+}
+a{
+    color:#CCC;
+    text-decoration: none;
+}
+a:hover{
+    color:#DDD;
+    text-decoration: none;
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* Header -------------------------- */
+.bk-menu{
+    /*opacity: 0;*/
+    width: 100%;
+    height: 700px;
+    background: #F4F4F4;
+}
+
+.right-menu{
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding-top: 24px;
+    padding-right: 60px;
+}
+.right-menu img{
+    width: 25px;
+    height: auto;
+}
+
+.bk-menu nav{
+    display: none;
+    width: 100%;
+    height: 100vh; /* 端末の高さの最大値 */
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.right-menu-open{
+    display: block;
+    z-index: 200;
+}
+.nav-container{
+    width: 100%;
+    height:100vh;
+    margin: 0;
+    padding-top: 248px;
+    position: relative;
+}
+.right-close{
+    display: block;
+    position: absolute;
+    right:10px;
+    top:10px;
+    width: 40px;
+    height: auto;
+    padding-top: 24px;
+    padding-right: 45px;
+}
+.right-close img{
+    width: 22px;
+    height: auto;
+}
+
+.bk-menu nav ul{
+    width: 100%;
+    float: none; /* floatの解除 */
+    display: block; /* flexの解除 */
+}
+.bk-menu nav ul li a{
+    display: block;
+    height: auto;
+    text-align: center;
+}
+.top img{
+    width: 141px;
+    height: auto;
+}
+.home{
+    margin-top: 33px;
+}
+.home img{
+    width: 64px;
+    height: auto;
+}
+.webApp{
+    margin-top: 33px;
+}
+.webApp img{
+    width: 121px;
+    height: auto;
+}
+.game{
+    margin-top: 33px;
+}
+.game img{
+    width: 63px;
+    height: auto;
+}
+.graphic{
+    margin-top: 33px;
+}
+.graphic img{
+    width: 95px;
+    height: auto;
+}
+.other{
+    margin-top: 33px;
+}
+.other img{
+    width: 74px;
+    height: auto;
+}
+
+
+
+
+
+
+.white-header h1{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 84px;
+}
+.white-header h1 img{
+    width: 198px;
+    height: 24px;
+}
+
+
+/* side bar */
+.header-left{
+    position: absolute;
+    left: 0;
+    top: 246px;
+    left: 84px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 250px;
+    right: 75px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
