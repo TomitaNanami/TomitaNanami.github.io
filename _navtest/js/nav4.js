@@ -1,13 +1,16 @@
 $('.header-container').find('.menu').on('click',function(){
     console.log('くりっく');
     $('.home').css('display','none');
-    $('.menu-container').css('display','block').addClass('fade-in');
+    $('.menu-container').css('display','block').removeClass('fade-out').addClass('fade-in');
 });
 
 $('.w-menu').on('click',function(){
     console.log('くりっく2');
     $('.home').css('display','block');
-    $('.header-container').addClass('fade-out');
+    $('.menu-container').removeClass('fade-in').addClass('fade-out');
+    setTimeout(function(){
+        $('.menu-container').remove();
+    },1000);
 });
 
 
