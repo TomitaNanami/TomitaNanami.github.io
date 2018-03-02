@@ -56,6 +56,7 @@ $(function(){
 
     var windowWidth;
     var windowHeight;
+    var puzzleFlag = true;
 
     // windowをリサイズしたら
     $(window).on('resize',function(){
@@ -120,13 +121,21 @@ $(function(){
     function setContent(){
         $('.header-container').find('.menu').on('click',function(){
             console.log('くりっく');
-            $('.home').css('display','none');
+
+            if(puzzleFlag == false){
+                $('.home').css('display','none');
+            }
             $('.menu-container').css('display','block').removeClass('fade-out').addClass('fade-in');
         });
 
+
         $('.w-menu').on('click',function(){
             console.log('くりっく2');
-            $('.home').css('display','block');
+
+            if(puzzleFlag == false){
+                $('.home').css('display','block');
+            }
+
             $('.menu-container').removeClass('fade-in').addClass('fade-out');
             setTimeout(function(){
                 $('.menu-container').removeClass('fade-in').css('display','none');
@@ -345,6 +354,7 @@ $(function(){
                 //ここに鍵が開くアニメーションをはじめるfunctionを入れる
                 machCount();
                 startCanvas();
+                puzzleFlag = false;
             }
         }
 
