@@ -366,6 +366,8 @@ $(function(){
 
         $('#slider135-container').addClass('openLeft');  //パズル左コンテナ移動
         $('#slider246-container').addClass('openRight');  //パズル右コンテナ移動
+        $('.footer').appendTo('.home');
+
 
         setTimeout(function(){
             $('.close-container').remove();  //閉じ鍵消す
@@ -381,6 +383,8 @@ $(function(){
 
                         setTimeout(function(){
                             $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
+                            $('.home').css('display','block');
+
 
                             // setTimeout(function(){
                             //     $('.footer').addClass('fade-in-footer');  //footerフェードイン
