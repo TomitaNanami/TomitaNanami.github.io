@@ -88,7 +88,7 @@ $(function(){
         splash = new createjs.Sprite(splashSheet,'move');
         stage.addChild(splash);
 		splash.x = 190;
-		splash.y = 280;
+		splash.y = 300;
         splash.scaleX = 0.7;
         splash.scaleY = 0.7;
         splash.gotoAndStop('stop');

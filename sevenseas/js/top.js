@@ -374,7 +374,7 @@ $(function(){
 
             setTimeout(function(){
                 $('.open-container').addClass('fade-out');  //開き鍵フェードアウト
-                $('.footer').appendTo('.home');
+                $('.footer').appendTo('.home').removeClass('fade-out');
 
                 // setTimeout(function(){
                 //     $('.footer').addClass('fade-out');  //footerフェードアウト
@@ -437,7 +437,7 @@ $(function(){
         splash = new createjs.Sprite(splashSheet,'move');
         stage.addChild(splash);
 		splash.x = 190;
-		splash.y = 280;
+		splash.y = 300;
         splash.scaleX = 0.7;
         splash.scaleY = 0.7;
         splash.gotoAndStop('stop');
