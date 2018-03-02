@@ -31,11 +31,11 @@ a:hover{
 
 
 /* Header -------------------------- */
-.bk-menu{
+.menu-container{
     /*opacity: 0;*/
     width: 100%;
     height: 700px;
-    background: #F4F4F4;
+    background: #FFF;
 }
 
 .right-menu{
