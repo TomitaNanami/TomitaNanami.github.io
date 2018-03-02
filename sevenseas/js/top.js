@@ -366,7 +366,7 @@ $(function(){
 
         $('#slider135-container').addClass('openLeft');  //パズル左コンテナ移動
         $('#slider246-container').addClass('openRight');  //パズル右コンテナ移動
-        $('.footer').appendTo('.home');
+        $('.footer').addClass('fade-out');
 
 
         setTimeout(function(){
@@ -374,6 +374,7 @@ $(function(){
 
             setTimeout(function(){
                 $('.open-container').addClass('fade-out');  //開き鍵フェードアウト
+                $('.footer').appendTo('.home');
 
                 // setTimeout(function(){
                 //     $('.footer').addClass('fade-out');  //footerフェードアウト
@@ -394,7 +395,7 @@ $(function(){
                     // },2000);//home出現のかっこ
                 // },10);  //footerフェードアウトのかっこ
             },500);//開き鍵フェードアウトのかっこ
-        },1500);  //閉じ鍵消すかっこ
+        },1);  //閉じ鍵消すかっこ
 
     }
 

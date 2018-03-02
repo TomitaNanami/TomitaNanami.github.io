@@ -10,6 +10,11 @@ a{
     text-decoration: none;
 }
 
+p{
+    color: #000;
+    text-decoration: none;
+}
+
 
 
 /* preload----------------------------------------------------- */
@@ -217,7 +222,7 @@ header h1 img{
     width: 1100px;
     height: 2319px;
     position: relative;
-    margin: 0 auto;
+    margin: 200px auto 0;
     /* display: none; */
     overflow: hidden;
 }

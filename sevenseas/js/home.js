@@ -1,5 +1,5 @@
 var splashSprite = {
-	images: ["img/splash.png"],
+	images: ["../img/homevis/splash.png"],
 	frames:{width:530,height:239},
 	animations:{
         stop:[0],
@@ -30,9 +30,9 @@ $(function(){
     stage.setClearColor("#BDE1DB");
     // 画像を保存する配列
     var manifest = [
-        {src: 'img/homevis/earth.png'},
-        {src: 'img/homevis/nanami2.png'},
-        {src: 'img/splash.png'}
+        {src: '../img/homevis/earth.png'},
+        {src: '../img/homevis/nanami2.png'},
+        {src: '../img/splash.png'}
     ];
 
     // loadQueueクラス
