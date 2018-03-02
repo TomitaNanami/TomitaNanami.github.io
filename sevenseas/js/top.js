@@ -384,14 +384,14 @@ $(function(){
 
                         setTimeout(function(){
                             $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
-                            $('.home').css('display','block');
+                            $('.home').css('display','block').addClass('fade-in');
 
 
                             // setTimeout(function(){
                             //     $('.footer').addClass('fade-in-footer');  //footerフェードイン
 
                             // },10);  //footerフェードインのかっこ
-                        },1000);//puzzleフェードアウトのかっこ
+                        },2000);//puzzleフェードアウトのかっこ
                     // },2000);//home出現のかっこ
                 // },10);  //footerフェードアウトのかっこ
             },500);//開き鍵フェードアウトのかっこ
