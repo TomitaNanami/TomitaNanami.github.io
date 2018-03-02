@@ -209,12 +209,16 @@ header h1 img{
 
 
 /* home (=contents)--------------------------- */
+.home{
+    display: none;
+}
+
 .contents{
     width: 1100px;
     position: relative;
     margin: 0 auto;
     /* display: none; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .rectLogo{
     position: absolute;
