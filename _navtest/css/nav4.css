@@ -279,13 +279,14 @@ header h1 img{
     height: auto;
     margin: 0 auto;
 }
-.w-topPuzzle {
+/* .w-topPuzzle {
     width: 141px;
     height: auto;
     margin: 33px auto 0;
-}
+} */
 .w-topPuzzle img{
     width: 141px;
+    height: auto;
 }
 .w-home{
     width: 64px;
