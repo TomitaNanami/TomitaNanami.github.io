@@ -375,8 +375,8 @@ function resizeWindow(){
                 // setTimeout(function(){
                 //     $('.footer').addClass('fade-out');  //footerフェードアウト
 
-                    setTimeout(function(){
-                        $('.contents').css('display','block').css('height','2270px');  //home出現&homeの高さを2270pxに
+                    // setTimeout(function(){
+                    //     $('.contents').css('display','block').css('height','2270px');  //home出現&homeの高さを2270pxに
 
                         setTimeout(function(){
                             $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
@@ -386,7 +386,7 @@ function resizeWindow(){
 
                             // },10);  //footerフェードインのかっこ
                         },1000);//puzzleフェードアウトのかっこ
-                    },2000);//home出現のかっこ
+                    // },2000);//home出現のかっこ
                 // },10);  //footerフェードアウトのかっこ
             },500);//開き鍵フェードアウトのかっこ
         },1500);  //閉じ鍵消すかっこ
@@ -456,7 +456,7 @@ function resizeWindow(){
   	createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick',function(){
 
-        earth.rotation -= 0.1;
+        // earth.rotation -= 0.1;
         stage.update();
     })
 
