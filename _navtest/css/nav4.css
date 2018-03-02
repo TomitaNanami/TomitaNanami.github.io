@@ -333,3 +333,38 @@ header h1 img{
     width: 74px;
     height: auto;
 }
+
+
+
+
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
