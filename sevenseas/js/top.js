@@ -1,7 +1,7 @@
 // 画像を保存する配列
 var manifest = [
     //左上
-    {src: '../img/top/l1-a.png'},
+    {src: 'img/top/l1-a.png'},
     {src: 'img/top/l1-c.png'},
     {src: 'img/top/l1-e.png'},  //2 使用しない
     {src: 'img/top/l1-g.png'},
@@ -33,7 +33,7 @@ var manifest = [
 
     {src: 'img/homevis/earth.png'},
     {src: 'img/homevis/nanami2.png'},
-    {src: 'img/splash.png'}
+    {src: 'img/homevis/splash.png'}
 ];
 
 
@@ -41,7 +41,7 @@ var manifest = [
 
 
 var splashSprite = {
-	images: ["img/splash.png"],
+	images: ["img/homevis/splash.png"],
 	frames:{width:530,height:239},
 	animations:{
         stop:[0],
@@ -317,6 +317,7 @@ $(function(){
                     console.log('パズルをクリアしました');
                 //ここに鍵が開くアニメーションをはじめるfunctionを入れる
                 machCount();
+                startCanvas();
             }
         }
 
@@ -335,8 +336,8 @@ $(function(){
             setTimeout(function(){
                 $('.open-container').addClass('fade-out');  //開き鍵フェードアウト
 
-                setTimeout(function(){
-                    $('.footer').addClass('fade-out');  //footerフェードアウト
+                // setTimeout(function(){
+                //     $('.footer').addClass('fade-out');  //footerフェードアウト
 
                     setTimeout(function(){
                         $('.contents').css('display','block').css('height','2270px');  //home出現&homeの高さを2270pxに
@@ -344,13 +345,13 @@ $(function(){
                         setTimeout(function(){
                             $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
 
-                            setTimeout(function(){
-                                $('.footer').addClass('fade-in-footer');  //footerフェードイン
+                            // setTimeout(function(){
+                            //     $('.footer').addClass('fade-in-footer');  //footerフェードイン
 
-                            },10);  //footerフェードインのかっこ
+                            // },10);  //footerフェードインのかっこ
                         },1000);//puzzleフェードアウトのかっこ
                     },2000);//home出現のかっこ
-                },10);  //footerフェードアウトのかっこ
+                // },10);  //footerフェードアウトのかっこ
             },500);//開き鍵フェードアウトのかっこ
         },1500);  //閉じ鍵消すかっこ
 
@@ -362,35 +363,7 @@ $(function(){
 
     var stage = new createjs.StageGL("canvasEl",{ antialias: true });
     stage.setClearColor("#BDE1DB");
-    // 画像を保存する配列
-    var manifest = [
-        {src: 'img/homevis/earth.png'},
-        {src: 'img/homevis/nanami2.png'},
-        {src: 'img/homevis/splash.png'}
-    ];
 
-    // loadQueueクラス
-    var loadQueue = new createjs.LoadQueue();
-
-    // 読み込み開始
-    loadQueue.loadManifest(manifest);
-
-    // 読み込み状況
-    loadQueue.addEventListener('progress',function(evt){
-        console.log(evt.progress);
-    });
-
-    // ひとつ読み込み終わったら
-    loadQueue.addEventListener("fileload", function(evt){
-        console.log(evt.result);
-    });
-
-    // 全部読み込み終わったら
-    loadQueue.addEventListener("complete", function(evt){
-        console.log('読み込み完了');
-        startCanvas();
-
-    });
 
     var earth;
     var splash;
