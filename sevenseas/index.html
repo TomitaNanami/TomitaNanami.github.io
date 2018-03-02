@@ -12,6 +12,12 @@
 </head>
 <body>
 
+    <!-- preload -->
+    <div class="wrap-loader">
+    <div class="loader-img"></div>
+        <div class="loader">Loading...</div>
+    </div>
+
     <!-- ヘッダーのコンテナ -->
     <div class="header-container">
         <!-- 上のヘッダー -->
@@ -206,9 +212,9 @@
             <div id="slider135-container">
                 <!-- 左上のパズル -->
                 <div id="slider-container1">
-                    <div id="slider1">
+                    <div id="slider1" class="slider">
                         <div id="rightBtn1"></div>
-                        <div id="photos1">
+                        <div id="photos1" class="photos">
                             <ul>
                                 <li><img src="img/top/l1-a.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/l1-c.png" width="550" height="212" alt="" /></li>
@@ -220,9 +226,9 @@
 
                 <!-- 左中央のパズル -->
                 <div id="slider-container3">
-                    <div id="slider3">
+                    <div id="slider3" class="slider">
                         <div id="rightBtn3"></div>
-                        <div id="photos3">
+                        <div id="photos3" class="photos">
                             <ul>
                                 <li><img src="img/top/l2-a.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/l2-c.png" width="550" height="212" alt="" /></li>
@@ -234,9 +240,9 @@
 
                 <!-- 左下のパズル -->
                 <div id="slider-container5">
-                    <div id="slider5">
+                    <div id="slider5" class="slider">
                         <div id="rightBtn5"></div>
-                        <div id="photos5">
+                        <div id="photos5" class="photos">
                             <ul>
                                 <li><img src="img/top/l3-a.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/l3-e.png" width="550" height="212" alt="" /></li>
@@ -254,9 +260,9 @@
             <div id="slider246-container">
                 <!-- 右上のパズル -->
                 <div id="slider-container2">
-                    <div id="slider2">
+                    <div id="slider2" class="slider">
                         <div id="rightBtn2"></div>
-                        <div id="photos2">
+                        <div id="photos2" class="photos">
                             <ul>
                                 <li><img src="img/top/r1-b.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/r1-f.png" width="550" height="212" alt="" /></li>
@@ -268,9 +274,9 @@
 
                 <!-- 右中央のパズル -->
                 <div id="slider-container4">
-                    <div id="slider4">
+                    <div id="slider4" class="slider">
                         <div id="rightBtn4"></div>
-                        <div id="photos4">
+                        <div id="photos4" class="photos">
                             <ul>
                                 <li><img src="img/top/r2-b.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/r2-d.png" width="550" height="212" alt="" /></li>
@@ -282,9 +288,9 @@
 
                 <!-- 右下のパズル -->
                 <div id="slider-container6">
-                    <div id="slider6">
+                    <div id="slider6" class="slider">
                         <div id="rightBtn6"></div>
-                        <div id="photos6">
+                        <div id="photos6" class="photos">
                             <ul>
                                 <li><img src="img/top/r3-b.png" width="550" height="212" alt="" /></li>
                                 <li><img src="img/top/r3-d.png" width="550" height="212" alt="" /></li>
@@ -322,6 +328,9 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/createjs@1.0.1/builds/1.0.0/createjs.min.js"></script>
     <script src="js/top.js"></script>
 </body>
 </html>

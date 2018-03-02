@@ -1,319 +1,456 @@
-$(function (){
+// 画像を保存する配列
+var manifest = [
+    //左上
+    {src: '../img/top/l1-a.png'},
+    {src: 'img/top/l1-c.png'},
+    {src: 'img/top/l1-e.png'},  //2 使用しない
+    {src: 'img/top/l1-g.png'},
+    //右上
+    {src: 'img/top/r1-b.png'},
+    {src: 'img/top/r1-d.png'},  //5 使用しない
+    {src: 'img/top/r1-f.png'},
+    {src: 'img/top/r1-h.png'},
+    //左中央
+    {src: 'img/top/l2-a.png'},
+    {src: 'img/top/l2-c.png'},
+    {src: 'img/top/l2-e.png'},
+    {src: 'img/top/l2-g.png'},  //11 使用しない
+    //右中央
+    {src: 'img/top/r2-b.png'},
+    {src: 'img/top/r2-d.png'},
+    {src: 'img/top/r2-f.png'},  //14 使用しない
+    {src: 'img/top/r2-h.png'},
+    //左下
+    {src: 'img/top/l3-a.png'},
+    {src: 'img/top/l3-c.png'},  //17 使用しない
+    {src: 'img/top/l3-e.png'},
+    {src: 'img/top/l3-g.png'},
+    //右下
+    {src: 'img/top/r3-b.png'},
+    {src: 'img/top/r3-d.png'},
+    {src: 'img/top/r3-f.png'},
+    {src: 'img/top/r3-h.png'} , //23 使用しない
 
-    //グローバル変数
-    var count1 = 0; //カウンタ
-    var count2 = 0; //カウンタ
-    var count3 = 0; //カウンタ
-    var count4 = 0; //カウンタ
-    var count5 = 0; //カウンタ
-    var count6 = 0; //カウンタ
-    var imageWidth = 550; //画像の幅
-    var imageLength = 3; //画像の数
-
-    var photoDiv1 = $('#photos1'); //画像が梱包されているdiv
-    var photoDiv2 = $('#photos2'); //画像が梱包されているdiv
-    var photoDiv3 = $('#photos3');
-    var photoDiv4 = $('#photos4');
-    var photoDiv5 = $('#photos5');
-    var photoDiv6 = $('#photos6');
-    var photoUl1 = $('#photos1 ul'); //画像リストulこれを複製
-    var photoUl2 = $('#photos2 ul'); //画像リストulこれを複製
-    var photoUl3 = $('#photos3 ul');
-    var photoUl4 = $('#photos4 ul');
-    var photoUl5 = $('#photos5 ul');
-    var photoUl6 = $('#photos6 ul');
-
-    var countArray = [0,0,0,0,0,0];
-
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl1.clone().prependTo(photoDiv1);
-    photoUl1.clone().appendTo(photoDiv1);
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl2.clone().prependTo(photoDiv2);
-    photoUl2.clone().appendTo(photoDiv2);
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl3.clone().prependTo(photoDiv3);
-    photoUl3.clone().appendTo(photoDiv3);
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl4.clone().prependTo(photoDiv4);
-    photoUl4.clone().appendTo(photoDiv4);
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl5.clone().prependTo(photoDiv5);
-    photoUl5.clone().appendTo(photoDiv5);
-    // 画像リストを複製して.photos要素の前と後ろに追加
-    photoUl6.clone().prependTo(photoDiv6);
-    photoUl6.clone().appendTo(photoDiv6);
+    {src: 'img/homevis/earth.png'},
+    {src: 'img/homevis/nanami2.png'},
+    {src: 'img/splash.png'}
+];
 
 
 
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv1.css('left' , startPos);
-    console.log(startPos); //-1440が出た
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv2.css('left' , startPos);
-    console.log(startPos); //-1440が出た
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv3.css('left' , startPos);
-    console.log(startPos);
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv4.css('left' , startPos);
-    console.log(startPos);
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv5.css('left' , startPos);
-    console.log(startPos);
-    //スタート時のx座標
-    var startPos = -(imageLength * imageWidth);
-    photoDiv6.css('left' , startPos);
-    console.log(startPos);
 
 
-    //#rightBtnをクリックしたら
-    $('#rightBtn1').click(function(){
-        moveRight1();
-    });
-    $('#rightBtn1').on('click',function(){
-        addCount(0);
-        matchCount();
-    });
-    //#rightBtnをクリックしたら
-    $('#rightBtn2').click(function(){
-        moveRight2();
-    });
-    $('#rightBtn2').on('click',function(){
-        addCount(1);
-        matchCount();
-    });
-    //#rightBtnをクリックしたら
-    $('#rightBtn3').click(function(){
-        moveRight3();
-    });
-    $('#rightBtn3').on('click',function(){
-        addCount(2);
-        matchCount();
-    });
-    //#rightBtnをクリックしたら
-    $('#rightBtn4').click(function(){
-        moveRight4();
-    });
-    $('#rightBtn4').on('click',function(){
-        addCount(3);
-        matchCount();
-    });
-    //#rightBtnをクリックしたら
-    $('#rightBtn5').click(function(){
-        moveRight5();
-    });
-    $('#rightBtn5').on('click',function(){
-        addCount(4);
-        matchCount();
-    });
-    //#rightBtnをクリックしたら
-    $('#rightBtn6').click(function(){
-        moveRight6();
-    });
-    $('#rightBtn6').on('click',function(){
-        addCount(5);
-        matchCount();
+var splashSprite = {
+	images: ["img/splash.png"],
+	frames:{width:530,height:239},
+	animations:{
+        stop:[0],
+		move:[0,30]
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+//preload-----------------------------------------------
+$(function(){
+
+    var windowWidth;
+    var windowHeight;
+
+    // console.log('preload----------');
+
+    var wLoader = $('.wrap-loader');
+
+
+    // loadQueueクラス
+    var loadQueue = new createjs.LoadQueue();
+
+    // 同時に何ファイル読み込むか
+    loadQueue.setMaxConnections(6);
+
+    // 読み込み開始
+    loadQueue.loadManifest(manifest);
+
+    // 読み込み状況
+    loadQueue.addEventListener('progress',function(evt){
+        console.log(evt.progress);
     });
 
-    function addCount(num){
-        var btnNum = countArray[num]; //countArrayの値をbtnNumに代入
-        btnNum += 1; //countNum==クリックして増えた数
-        if(btnNum > 2){
-            btnNum = 0;
-        }
-        countArray[num] = btnNum; //クリックして増えた数をcountArrayに戻す
-        console.log(countArray);
+    // ひとつ読み込み終わったら
+    loadQueue.addEventListener("fileload", function(evt){
+        // console.log(evt.result);
+    });
+
+    // 全部読み込み終わったら
+    loadQueue.addEventListener("complete", function(evt){
+        console.log('読み込み完了');
+        startScene();
+    });
+
+
+
+    function startScene(){
+        wLoader.addClass('fade-out');
+        setTimeout(function(){
+            wLoader.remove();
+            $('.container').css('display','block');
+
+        },1500)
+
+        puzzleStart();
+
+    }
+
+    function puzzleStart(){
+        //たいやき1 (インスタンス)
+        var puzzle1 = new Puzzle(photoArr01,0,'#slider1',0);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn1').on('click',function(){  //ボタンをクリックしたら
+            puzzle1.clickAnime();
+        });
+
+        //たいやき2 (インスタンス)
+        var puzzle2 = new Puzzle(photoArr02,0,'#slider2',1);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn2').on('click',function(){  //ボタンをクリックしたら
+            puzzle2.clickAnime();
+        });
+
+        //たいやき3 (インスタンス)
+        var puzzle3 = new Puzzle(photoArr03,0,'#slider3',2);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn3').on('click',function(){  //ボタンをクリックしたら
+            puzzle3.clickAnime();
+        });
+
+        //たいやき4 (インスタンス)
+        var puzzle4 = new Puzzle(photoArr04,0,'#slider4',3);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn4').on('click',function(){  //ボタンをクリックしたら
+            puzzle4.clickAnime();
+        });
+
+        //たいやき5 (インスタンス)
+        var puzzle5 = new Puzzle(photoArr05,0,'#slider5',4);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn5').on('click',function(){  //ボタンをクリックしたら
+            puzzle5.clickAnime();
+        });
+
+        //たいやき6 (インスタンス)
+        var puzzle6 = new Puzzle(photoArr06,0,'#slider6',5);
+        // -----------------------------------------------
+        // イベント
+        // -----------------------------------------------
+        $('#rightBtn6').on('click',function(){  //ボタンをクリックしたら
+            puzzle6.clickAnime();
+        });
     }
 
 
-    function moveRight1(){
-        //カウンター変数を1ずつ加算していく
-        count1 = count1 + 1;
-        photoDiv1.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos1);
-    };
-    function moveRight2(){
-        //カウンター変数を1ずつ加算していく
-        count2 = count2 + 1;
-        photoDiv2.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos2);
-    };
-    function moveRight3(){
-        //カウンター変数を1ずつ加算していく
-        count3 = count3 + 1;
-        photoDiv3.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos3);
-    };
-    function moveRight4(){
-        //カウンター変数を1ずつ加算していく
-        count4 = count4 + 1;
-        photoDiv4.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos4);
-    };
-    function moveRight5(){
-        //カウンター変数を1ずつ加算していく
-        count5 = count5 + 1;
-        photoDiv5.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos5);
-    };
-    function moveRight6(){
-        //カウンター変数を1ずつ加算していく
-        count6 = count6 + 1;
-        photoDiv6.animate({'left' : '-=' + (imageWidth)}, 1000,resetPos6);
-    };
 
 
 
 
-    //位置をリセット
-    function resetPos1() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count1) >= imageLength){
 
-            //div#imageを初期値に戻す
-            photoDiv1.css({'left' : startPos});
 
-            //カウンタに0を代入
-            count1 = 0;
+
+//puzzle---------------------------------------------------------------
+
+
+    // パズル全体を管理する配列全部が1になると揃う
+    var puzzleArr = [0,0,0,0,0,0];
+
+
+    // 画像の元の配列  ひとつめのパズルで使う画像はこれだよ
+    var photoArr01 = [manifest[0].src,manifest[1].src,manifest[3].src];
+    var photoArr02 = [manifest[4].src,manifest[6].src,manifest[7].src];
+    var photoArr03 = [manifest[8].src,manifest[9].src,manifest[10].src];
+    var photoArr04 = [manifest[12].src,manifest[13].src,manifest[15].src];
+    var photoArr05 = [manifest[16].src,manifest[18].src,manifest[19].src];
+    var photoArr06 = [manifest[20].src,manifest[21].src,manifest[22].src];
+
+
+    //たいやき機
+    class Puzzle {
+        constructor(photoArr,correctNumber,slideDiv,puzzleNumber) {
+            console.log('コンストラクタ');
+
+            // -----------------------------------------------
+            // プロパティ(=グローバル変数)
+            // -----------------------------------------------
+            // 画像の元の配列
+            this.photoArr = photoArr;
+            this.correctNumber = correctNumber; //正解番号
+            // this.correctNumber = 0; //正解番号
+
+            this.shuffleArr = [];  //var photoArrをシャッフルした配列
+            this.correctCount;  //シャッフル後、何番目が正解の画像か探す変数
+            this.imageWidth = 550;  //画像の幅
+            this.imageLength = 3; //画像の数
+            this.clickCount = 0;  //何回クリックしたか(=0は初期値)
+            this.clickflag = true;  //クリックできるかどうかのフラグ
+
+            this.slideDiv = slideDiv; //#slider0*にアクセスする
+            this.photoDiv = $(this.slideDiv).find('.photos'); //画像が梱包されているdiv
+            this.photoUl = $(this.photoDiv).find('ul'); //画像リストのulこれを複製
+
+            this.puzzleNumber = puzzleNumber;
+
+            this.init();  //ロード後に実行する
+
         }
 
-        console.log('count1:'+count1);
-    };
-    //位置をリセット
-    function resetPos2() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count2) >= imageLength){
 
-            //div#imageを初期値に戻す
-            photoDiv2.css({'left' : startPos});
+        // -----------------------------------------------
+        // メソッド(=関数)
+        // -----------------------------------------------
 
-            //カウンタに0を代入
-            count2 = 0;
-        }
+        init(){  //初期設定
 
-        console.log('count2:'+count2);
-    };
-    //位置をリセット
-    function resetPos3() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count3) >= imageLength){
+            //画像の配列をシャッフル
+            this.shuffleArr = _.shuffle(this.photoArr);
+            console.log(this.shuffleArr);
 
-            //div#imageを初期値に戻す
-            photoDiv3.css({'left' : startPos});
+            //正解の番号がシャッフル後の何番目かを調べる
+            this.correctCount = _.indexOf(this.shuffleArr,this.photoArr[this.correctNumber]);
+            console.log('correctCount:' + this.correctCount);
 
-            //カウンタに0を代入
-            count3 = 0;
-        }
+            //jQueryで画像をシャッフルする
+            var that = this;
+            $(this.photoUl).find('li').each(function(i){ //3つの画像を入れ替えるには3回処理
+                $(this).find('img').attr('src',that.shuffleArr[i]); //アトリビュートをいじる
+            });
 
-        console.log('count3:'+count3);
-    };
-    //位置をリセット
-    function resetPos4() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count4) >= imageLength){
-
-            //div#imageを初期値に戻す
-            photoDiv4.css({'left' : startPos});
-
-            //カウンタに0を代入
-            count4 = 0;
-        }
-
-        console.log('count4:'+count4);
-    };
-    //位置をリセット
-    function resetPos5() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count5) >= imageLength){
-
-            //div#imageを初期値に戻す
-            photoDiv5.css({'left' : startPos});
-
-            //カウンタに0を代入
-            count5 = 0;
-        }
-
-        console.log('count5:'+count5);
-    };
-    //位置をリセット
-    function resetPos6() {
-        //もしカウンタの絶対値がimageLength(画像の数)=4以上だったら
-        if( Math.abs(count6) >= imageLength){
-
-            //div#imageを初期値に戻す
-            photoDiv6.css({'left' : startPos});
-
-            //カウンタに0を代入
-            count6 = 0;
-        }
-
-        console.log('count6:'+count6);
-    };
-
-
-
-
-
-
-    //配列の中身が1に揃ったらコンソールを出す
-    function matchCount(){
-        if(countArray[0] == 0 && countArray[1] == 0 && countArray[2] == 0 && countArray[3] == 0 && countArray[4] == 0 && countArray[5] == 0){
-            console.log('finished!!!!!!!!!!!');
-            $('#slider135-container').addClass('openLeft');
-            $('#slider246-container').addClass('openRight');
             setTimeout(function(){
-                console.log('settimeout');
-                $('.close-container').remove();
+                that.startAnime();  //initが終わったらstartAnimeを実行
+            },1000)
+        }
+
+        startAnime(){
+            // var time = _.random(0, 3);
+            var time = Math.random()*2;
+            console.log('time: ' +time);
+            var that = this;
+
+            $(this.photoDiv).delay(time* 1000).animate({'opacity':1},800,function(){
+                // CSSアニメーションをaddClassで付与
+                $(this).addClass('trX0');
                 setTimeout(function(){
-                    console.log('open-fade-out');
-                    $('.open-container').addClass('fade-out');
-                    setTimeout(function(){
-                        console.log('settimeout2');
-                        $('.footer').addClass('fade-out');
-                        setTimeout(function(){
-                            console.log('settimeout2');
-                            $('.contents').css('display', 'block').css('height','2270px');
-                            console.log('block');
-                            setTimeout(function(){
-                                console.log('puzzle');
-                                $('.puzzle').addClass('fade-out');
-                                setTimeout(function(){
-                                    console.log('BG');
-                                    $('.whiteBG').addClass('fade-out');
-                                },3000);
-                                    setTimeout(function(){
-                                        console.log('f-fade-in');
-                                        $('.footer').addClass('fade-in-footer');
-                                    });
-                            },1000);
-                        },3000);
-                    });
-                },10);
-            },1500);
+                    that.filterCount();
+                }, 1000);
+            });
+        }
+
+        clickAnime(){
+
+            if(this.clickflag == true){  //フラグがオンなら
+
+                 this.clickflag = false;  //フラグをオフにする
+                 $(this.photoDiv).removeAttr('class'); //photoDivから一旦classごと削除
+                 $(this.photoDiv).addClass('trX' + this.clickCount);
+                 var that = this;
+                 setTimeout(function(){
+                     that.clickflag = true;  //フラグを元に戻す
+                     that.filterCount();  //アニメーションが終わってからfilterCountを実行
+                 },1000);
+
+            }else{
+                return false; //フラグがオフならこの関数から抜ける(=押せない)
+            }
+        }
+
+        filterCount(){
+            this.clickCount ++;
+
+            if(this.clickCount == this.imageLength - 1){  //2枚目に来た時にphotoUlをクローン
+                $(this.photoUl).clone().prependTo(this.photoDiv);
+            }
+
+            if(this.clickCount >= this.imageLength){  //もしクリックの数が画像の枚数を超えたら
+                this.clickCount = 0;  //clickCountを0に戻す
+                $(this.photoDiv).find('ul:first').remove();  //左に消えた(先頭の)ulを削除
+                $(this.photoDiv).removeClass('trX2');  //cssアニメーションを削除、元の位置に戻す
+            }
+            console.log('clickCount:' + this.clickCount);
+
+            this.setPuzzle();
+        }
+
+        setPuzzle(){
+            //クリック回数と正解の番号が一致したら
+            if (this.clickCount == this.correctCount){
+                puzzleArr[this.puzzleNumber] = 1;
+                console.log('ピースのひとつが正解');
+            }else{
+                puzzleArr[this.puzzleNumber] = 0;
+            }
+            console.log('setPuzzle_puzzleArr: ' + puzzleArr);
+
+            this.clearPuzzle();
+        }
+
+        clearPuzzle(){
+            //配列の全ての値が一致したらtrueを返す
+            var result = _.every(puzzleArr,function(value){
+                return value == 1;
+            });
+            if(result == true){
+                    console.log('パズルをクリアしました');
+                //ここに鍵が開くアニメーションをはじめるfunctionを入れる
+                machCount();
+            }
         }
 
     }
 
 
-    //自動処理
-    function startInterval(){
+    function machCount(){
 
-        //setIntervalをクリアする
-        clearInterval(interVal);
 
-        //setIntervalに関数moveRightを設定する
-        interval = setInterval(moveRight1, 2000);
-    };
-    //自動処理
-    function startInterval(){
+        $('#slider135-container').addClass('openLeft');  //パズル左コンテナ移動
+        $('#slider246-container').addClass('openRight');  //パズル右コンテナ移動
 
-        //setIntervalをクリアする
-        clearInterval(interVal);
+        setTimeout(function(){
+            $('.close-container').remove();  //閉じ鍵消す
 
-        //setIntervalに関数moveRightを設定する
-        interval = setInterval(moveRight2, 2000);
-    };
+            setTimeout(function(){
+                $('.open-container').addClass('fade-out');  //開き鍵フェードアウト
+
+                setTimeout(function(){
+                    $('.footer').addClass('fade-out');  //footerフェードアウト
+
+                    setTimeout(function(){
+                        $('.contents').css('display','block').css('height','2270px');  //home出現&homeの高さを2270pxに
+
+                        setTimeout(function(){
+                            $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
+
+                            setTimeout(function(){
+                                $('.footer').addClass('fade-in-footer');  //footerフェードイン
+
+                            },10);  //footerフェードインのかっこ
+                        },1000);//puzzleフェードアウトのかっこ
+                    },2000);//home出現のかっこ
+                },10);  //footerフェードアウトのかっこ
+            },500);//開き鍵フェードアウトのかっこ
+        },1500);  //閉じ鍵消すかっこ
+
+    }
+
+
+
+
+
+    var stage = new createjs.StageGL("canvasEl",{ antialias: true });
+    stage.setClearColor("#BDE1DB");
+    // 画像を保存する配列
+    var manifest = [
+        {src: 'img/homevis/earth.png'},
+        {src: 'img/homevis/nanami2.png'},
+        {src: 'img/homevis/splash.png'}
+    ];
+
+    // loadQueueクラス
+    var loadQueue = new createjs.LoadQueue();
+
+    // 読み込み開始
+    loadQueue.loadManifest(manifest);
+
+    // 読み込み状況
+    loadQueue.addEventListener('progress',function(evt){
+        console.log(evt.progress);
+    });
+
+    // ひとつ読み込み終わったら
+    loadQueue.addEventListener("fileload", function(evt){
+        console.log(evt.result);
+    });
+
+    // 全部読み込み終わったら
+    loadQueue.addEventListener("complete", function(evt){
+        console.log('読み込み完了');
+        startCanvas();
+
+    });
+
+    var earth;
+    var splash;
+    var nanami;
+
+
+    function startCanvas(){
+
+        // earth
+        earth = new createjs.Bitmap(manifest[24].src);
+        earth.x = stage.canvas.width/2;
+        earth.y = 1100;
+        earth.width = 1483;
+        earth.height = 1470;
+        earth.regX = earth.width/2;
+        earth.regY = earth.height/2;
+        stage.addChild(earth);
+
+        // nanami
+        nanami = new createjs.Bitmap(manifest[25].src);
+        nanami.x = 310;
+        nanami.y = 280;
+        nanami.width = 516;
+        nanami.height = 671;
+        stage.addChild(nanami);
+
+        // splash
+        var splashSheet = new createjs.SpriteSheet(splashSprite);
+        splash = new createjs.Sprite(splashSheet,'move');
+        stage.addChild(splash);
+		splash.x = 190;
+		splash.y = 280;
+        splash.scaleX = 0.7;
+        splash.scaleY = 0.7;
+        splash.gotoAndStop('stop');
+
+        //  レイヤー
+        stage.setChildIndex(nanami,1);
+        stage.setChildIndex(earth,2);
+
+        moveS();
+        function moveS(){
+            createjs.Tween.get(nanami).wait(100).to({x: 310, y:300},500).call(function(){
+                splash.gotoAndPlay('move');
+            }).wait(380).to({x: 310, y:280},700).call(function(){
+                splash.gotoAndPlay('stop');
+                moveS();
+            });
+        }
+        stage.update();
+    }
+
+  	createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+  	createjs.Ticker.setFPS(30);
+    createjs.Ticker.addEventListener('tick',function(){
+
+        earth.rotation -= 0.1;
+        stage.update();
+    })
+
 
 
 
