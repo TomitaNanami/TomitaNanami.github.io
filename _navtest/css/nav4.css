@@ -25,7 +25,7 @@ header h1{
     height: 24px;
     position: absolute;
     top: 26px;
-    left: 84px;
+    left: 50px;
 }
 header h1 img{
     width: 198px;
@@ -47,8 +47,8 @@ header h1 img{
 .header-left{
     position: absolute;
     left: 0;
-    top: 246px;
-    left: 84px;
+    top: 300px;
+    left: 50px;
 }
 .header-left img{
     width: 9px;
@@ -58,8 +58,8 @@ header h1 img{
     width: 17px;
     height: 220px;
     position: absolute;
-    top: 250px;
-    right: 75px;
+    top: 300px;
+    right: 50px;
 }
 .heaer-right ul{
     width: 10px;
