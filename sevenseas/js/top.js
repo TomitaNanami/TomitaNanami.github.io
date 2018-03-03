@@ -499,5 +499,32 @@ $(function(){
 
 
 
+    //スクロールイベント
+	$(window).on('scroll',function(){
+        // console.log('スクロールしている');
+
+        // 上からのスクロール値
+        var dy = $(this).scrollTop();
+        console.log('dy:' + dy);
+
+
+        if(dy >= 400){
+            $('.box1').addClass('in-left');
+        }
+		if(dy >= 800){
+            $('.box2').addClass('in-right');
+        }
+		if(dy >= 1200){
+            $('.box3').addClass('in-left');
+        }
+		if(dy >= 1600){
+            $('.box4').addClass('in-right');
+        }
+
+    });
+
+
+
+
 
 });
