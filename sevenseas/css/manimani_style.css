@@ -178,6 +178,7 @@ header h1 img{
 .photo-container{
     width: 655px;
     height: 3324px;
+    position: relative;
 }
 .photo1 {
     width: 655px;
@@ -189,10 +190,25 @@ header h1 img{
     width: 655px;
     height: 479px;
 }
+.box0{
+    width: 655px;
+    height: 479px;
+    background-color: #BDE1DB;
+    position: absolute;
+    top: 0px;
+}
 .youtube-movie{
     width: 655px;
     height: 479px;
     margin-bottom: 75px;
+}
+.box1{
+    width: 655px;
+    height: 479px;
+    background-color: #FFF5BD;
+    position: absolute;
+    top: 554px;
+
 }
 .photo2{
     width: 655px;
@@ -202,6 +218,15 @@ header h1 img{
 .photo2 img{
     width: 655px;
     height: 1662px;
+    z-index: 0;
+}
+.box2{
+    width: 655px;
+    height: 1662px;
+    background-color: #FBDBC7;
+    position: absolute;
+    top: 1108px;
+    z-index: 100;
 }
 .photo3{
     width: 655px;
@@ -212,6 +237,14 @@ header h1 img{
     width: 655px;
     height: 479px;
 }
+.box3{
+    width: 655px;
+    height: 479px;
+    background-color: #FDE7C1;
+    position: absolute;
+    top: 2845px;
+    z-index: 100;
+}
 .photo4{
     width: 655px;
     height: 479px;
@@ -219,6 +252,14 @@ header h1 img{
 .photo4 img{
     width: 655px;
     height: 479px;
+}
+.box4{
+    width: 655px;
+    height: 479px;
+    background-color: #EFF3CA;
+    position: absolute;
+    top: 3399px;
+    z-index: 100;
 }
 
 
@@ -382,3 +423,44 @@ header h1 img{
     width: 257px;
     height: 169px;
 } */
+
+
+
+
+
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
