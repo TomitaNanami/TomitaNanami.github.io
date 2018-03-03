@@ -33,7 +33,9 @@ var manifest = [
 
     {src: 'img/homevis/earth.png'},
     {src: 'img/homevis/nanami2.png'},
-    {src: 'img/homevis/splash.png'}
+    {src: 'img/homevis/splash.png'},
+    {src: 'img/homevis/inbg.png'},
+    {src: 'img/homevis/outbg.png'}
 ];
 
 
@@ -442,9 +444,35 @@ $(function(){
         splash.scaleY = 0.7;
         splash.gotoAndStop('stop');
 
+        // inbg
+        inbg = new createjs.Bitmap(manifest[27].src);
+        inbg.x = stage.canvas.width/2;
+        inbg.y = 1100;
+        inbg.width = 2109;
+        inbg.height = 2109;
+        inbg.regX = inbg.width/2;
+        inbg.regY = inbg.height/2;
+		inbg.scaleX = 0.9;
+        inbg.scaleY = 0.9;
+        stage.addChild(inbg);
+
+		// outbg
+        outbg = new createjs.Bitmap(manifest[28].src);
+        outbg.x = stage.canvas.width/2;
+        outbg.y = 1100;
+        outbg.width = 2980;
+        outbg.height = 2980;
+        outbg.regX = outbg.width/2;
+        outbg.regY = outbg.height/2;
+		outbg.scaleX = 0.9;
+        outbg.scaleY = 0.9;
+        stage.addChild(outbg);
+
         //  レイヤー
-        stage.setChildIndex(nanami,1);
-        stage.setChildIndex(earth,2);
+		stage.setChildIndex(outbg,1);
+		stage.setChildIndex(inbg,2);
+        stage.setChildIndex(nanami,3);
+        stage.setChildIndex(earth,4);
 
         moveS();
         function moveS(){
@@ -462,7 +490,9 @@ $(function(){
   	createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick',function(){
 
-        // earth.rotation -= 0.1;
+        earth.rotation -= 0.3;
+		inbg.rotation += 0.15;
+		outbg.rotation += 0.2;
         stage.update();
     })
 

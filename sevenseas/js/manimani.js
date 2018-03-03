@@ -12,19 +12,19 @@ $(function() {
             $('.box0').addClass('in-left');
         }
 
-        if(dy >= 80){
+        if(dy >= 110){
             $('.box1').addClass('in-right');
         }
 
-        if(dy >= 650){
+        if(dy >= 700){
             $('.box2').addClass('in-left');
         }
 
-        if(dy >= 2200){
+        if(dy >= 2300){
             $('.box3').addClass('in-right');
         }
 
-        if(dy >= 2710){
+        if(dy >= 3050){
             $('.box4').addClass('in-left');
         }
 

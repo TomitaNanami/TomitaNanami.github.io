@@ -176,6 +176,27 @@ header h1 img{
     width: 315px;
     height: 315px;
 }
+.box1{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #FBDBC7;
+    top: 122px;
+}
+.box2{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #EFF3CA;
+    top: 122px;
+}
+.box3{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #FFF5BD;
+    top: 122px;
+}
 
 
 
@@ -326,4 +347,46 @@ header h1 img{
 }
 .carrier{
     margin-bottom: 12px;
+}
+
+
+
+
+
+/* スクロールアニメーション */
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
 }
