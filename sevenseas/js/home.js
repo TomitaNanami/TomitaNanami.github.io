@@ -161,16 +161,16 @@ $(function(){
         console.log('dy:' + dy);
 
 
-        if(dy >= 400){
+        if(dy >= 200){
             $('.box1').addClass('in-left');
         }
-		if(dy >= 800){
+		if(dy >= 700){
             $('.box2').addClass('in-right');
         }
-		if(dy >= 1200){
+		if(dy >= 1000){
             $('.box3').addClass('in-left');
         }
-		if(dy >= 1600){
+		if(dy >= 1400){
             $('.box4').addClass('in-right');
         }
 

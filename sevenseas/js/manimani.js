@@ -16,15 +16,15 @@ $(function() {
             $('.box1').addClass('in-right');
         }
 
-        if(dy >= 700){
+        if(dy >= 500){
             $('.box2').addClass('in-left');
         }
 
-        if(dy >= 2300){
+        if(dy >= 2000){
             $('.box3').addClass('in-right');
         }
 
-        if(dy >= 3050){
+        if(dy >= 2700){
             $('.box4').addClass('in-left');
         }
 
