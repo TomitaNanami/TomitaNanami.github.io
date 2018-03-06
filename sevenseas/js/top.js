@@ -146,7 +146,7 @@ $(function(){
             console.log('くりっく');
 
             if(puzzleFlag == false){
-                $('.home').css('display','none');
+                $('.puzzle').css('display','none');
             }
             $('.menu-container').css('display','block').removeClass('fade-out').addClass('fade-in');
         });
@@ -509,7 +509,7 @@ $(function(){
         createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 20);
         createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 10);
         createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 20);
-        
+
         stage.update();
     }
 
