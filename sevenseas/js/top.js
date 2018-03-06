@@ -30,12 +30,33 @@ var manifest = [
     {src: 'img/top/r3-d.png'},
     {src: 'img/top/r3-f.png'},
     {src: 'img/top/r3-h.png'} , //23 使用しない
-
+    //canbas
     {src: 'img/homevis/earth.png'},
     {src: 'img/homevis/nanami2.png'},
     {src: 'img/homevis/splash.png'},
     {src: 'img/homevis/inbg.png'},
-    {src: 'img/homevis/outbg.png'}
+    {src: 'img/homevis/outbg.png'},
+    //home
+    {src: 'img/02_home/game.jpg'},
+    {src: 'img/02_home/gameLogo.svg'},
+    {src: 'img/02_home/graphic.jpg'},
+    {src: 'img/02_home/graphicLogo.svg'},
+    {src: 'img/02_home/other.jpg'},
+    {src: 'img/02_home/otherLogo.svg'},
+    {src: 'img/02_home/webApp.jpg'},
+    {src: 'img/02_home/webAppLogo.svg'},
+    //gameCategory
+    {src: 'img/categoryTitle/game.svg'},
+    {src: 'img/rect/manimani.png'},
+    {src: 'img/rect/zenMore.png'},
+    {src: 'img/rect/drawing.png'},
+    //manimani
+    {src: 'img/manimani/img1.png'},
+    {src: 'img/manimani/img2.png'},
+    {src: 'img/manimani/img3.png'},
+    {src: 'img/manimani/img4.png'},
+    {src: 'img/manimani/next.png'},
+    {src: 'img/manimani/preview.png'}
 ];
 
 
@@ -490,9 +511,11 @@ $(function(){
   	createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick',function(){
 
-        earth.rotation -= 0.3;
-		inbg.rotation += 0.15;
-		outbg.rotation += 0.2;
+        //createjs.Tween.get(tomato, {loop:true}).to({rotation: 360}, 5000);
+        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 5000);
+        // earth.rotation -= 0.3;
+		// inbg.rotation += 0.15;
+		// outbg.rotation += 0.2;
         stage.update();
     })
 

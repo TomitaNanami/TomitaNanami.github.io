@@ -1,4 +1,9 @@
 $(function() {
+
+    setTimeout(function(){
+        $('.box0').addClass('in-left');
+    },300);
+
 // スクロールイベント
     $(window).on('scroll',function(){
         // console.log('スクロールしている');
@@ -8,9 +13,6 @@ $(function() {
         console.log('dy:' + dy);
 
 
-        if(dy >= 0){
-            $('.box0').addClass('in-left');
-        }
 
         if(dy >= 110){
             $('.box1').addClass('in-right');
