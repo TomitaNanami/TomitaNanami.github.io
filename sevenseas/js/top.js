@@ -433,6 +433,8 @@ $(function(){
     var earth;
     var splash;
     var nanami;
+    var inbg;
+    var outbg;
 
 
     function startCanvas(){
@@ -511,8 +513,9 @@ $(function(){
   	createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick',function(){
 
-        //createjs.Tween.get(tomato, {loop:true}).to({rotation: 360}, 5000);
-        createjs.Tween.get(earth, {loop:true}).to({rotation: -360}, 300);
+        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 20);
+        createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 10);
+        createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 20);
         // earth.rotation -= 0.3;
 		// inbg.rotation += 0.15;
 		// outbg.rotation += 0.2;
