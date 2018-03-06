@@ -506,6 +506,10 @@ $(function(){
                 moveS();
             });
         }
+        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 20);
+        createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 10);
+        createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 20);
+        
         stage.update();
     }
 
@@ -513,9 +517,6 @@ $(function(){
   	createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick',function(){
 
-        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 20);
-        createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 10);
-        createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 20);
         // earth.rotation -= 0.3;
 		// inbg.rotation += 0.15;
 		// outbg.rotation += 0.2;
