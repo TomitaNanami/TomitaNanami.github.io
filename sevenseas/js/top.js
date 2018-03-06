@@ -512,7 +512,7 @@ $(function(){
     createjs.Ticker.addEventListener('tick',function(){
 
         //createjs.Tween.get(tomato, {loop:true}).to({rotation: 360}, 5000);
-        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, -5000);
+        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 300);
         // earth.rotation -= 0.3;
 		// inbg.rotation += 0.15;
 		// outbg.rotation += 0.2;
