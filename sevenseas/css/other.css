@@ -38,14 +38,14 @@ header h1 img{
     width: 198px;
     height: 24px;
 }
-.menu{
+.right-menu{
     width: 25px;
     height: 18px;
     position: absolute;
     top: 28px;
     right: 50px;
 }
-.menu img{
+.right-menu img{
     width: 25px;
     height: auto;
 }

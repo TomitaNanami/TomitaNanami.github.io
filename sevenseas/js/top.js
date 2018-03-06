@@ -266,7 +266,7 @@ $(function(){
             this.imageWidth = 550;  //画像の幅
             this.imageLength = 3; //画像の数
             this.clickCount = 0;  //何回クリックしたか(=0は初期値)
-            this.clickflag = true;  //クリックできるかどうかのフラグ
+            this.clickflag = false;  //クリックできるかどうかのフラグ
 
             this.slideDiv = slideDiv; //#slider0*にアクセスする
             this.photoDiv = $(this.slideDiv).find('.photos'); //画像が梱包されているdiv
@@ -315,6 +315,7 @@ $(function(){
                 $(this).addClass('trX0');
                 setTimeout(function(){
                     that.filterCount();
+                    that.clickflag = true;
                 }, 1000);
             });
         }
@@ -376,7 +377,7 @@ $(function(){
                     console.log('パズルをクリアしました');
                 //ここに鍵が開くアニメーションをはじめるfunctionを入れる
                 machCount();
-                startCanvas();
+                // startCanvas();
                 puzzleFlag = false;
             }
         }
@@ -397,7 +398,7 @@ $(function(){
 
             setTimeout(function(){
                 $('.open-container').addClass('fade-out');  //開き鍵フェードアウト
-                $('.footer').appendTo('.home').removeClass('fade-out');
+                // $('.footer').appendTo('.home').removeClass('fade-out');
 
                 // setTimeout(function(){
                 //     $('.footer').addClass('fade-out');  //footerフェードアウト
@@ -407,9 +408,8 @@ $(function(){
 
                         setTimeout(function(){
                             $('.puzzle').addClass('fade-out'); //puzzleをコンテナごとフェードアウト
-                            $('.home').css('display','block').addClass('fade-in');
-
-
+                            // $('.home').css('display','block').addClass('fade-in');
+                            loadHome();
                             // setTimeout(function(){
                             //     $('.footer').addClass('fade-in-footer');  //footerフェードイン
 
@@ -422,22 +422,47 @@ $(function(){
 
     }
 
+    function loadHome(){
+        $.ajax({
+            url: './home/index.html',
+            type: 'GET',
+            dataType: 'html',
+        })
+        .done(function (data){
+            console.log('ajax 成功');
+            console.log(data);
+            var out_html = $($.parseHTML(data));  //parse
+            $('.home').find('.contents').empty().append(out_html.filter('.contents')[0].innerHTML);
+            $('.home').css('display','block').addClass('fade-in');
+            startCanvas();
+            $('.footer').appendTo('.home').removeClass('fade-out');
+
+        })
+        .fail(function (){
+            console.log('ajax 失敗');
+        });
+    }
 
 
 
 
-    var stage = new createjs.StageGL("canvasEl",{ antialias: true });
-    stage.setClearColor("#BDE1DB");
 
 
-    var earth;
-    var splash;
-    var nanami;
-    var inbg;
-    var outbg;
 
 
     function startCanvas(){
+
+        var stage = new createjs.StageGL("canvasEl",{ antialias: true });
+        stage.setClearColor("#BDE1DB");
+
+
+        var earth;
+        var splash;
+        var nanami;
+        var inbg;
+        var outbg;
+
+
 
         // earth
         earth = new createjs.Bitmap(manifest[24].src);
@@ -506,22 +531,25 @@ $(function(){
                 moveS();
             });
         }
-        createjs.Tween.get(earth, {loop:true}).to({rotation: 360}, 20);
-        createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 10);
-        createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 20);
+        createjs.Tween.get(earth, {loop:true}).to({rotation: -360}, 100000);
+        createjs.Tween.get(inbg, {loop:true}).to({rotation: 360}, 100000);
+        createjs.Tween.get(outbg, {loop:true}).to({rotation: 360}, 100000);
 
         stage.update();
+
+
+        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener('tick',function(){
+
+            // earth.rotation -= 0.3;
+            // inbg.rotation += 0.15;
+            // outbg.rotation += 0.2;
+            stage.update();
+        })
     }
 
-  	createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
-  	createjs.Ticker.setFPS(30);
-    createjs.Ticker.addEventListener('tick',function(){
 
-        // earth.rotation -= 0.3;
-		// inbg.rotation += 0.15;
-		// outbg.rotation += 0.2;
-        stage.update();
-    })
 
 
 

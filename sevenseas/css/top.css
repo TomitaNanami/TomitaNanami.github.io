@@ -34,6 +34,7 @@ body {
   background-color: #FFF;
   position: absolute;
   z-index: 500;
+  top: 0;
 }
 
 .loader,
@@ -214,18 +215,10 @@ header h1 img{
 
 
 /* home (=contents)--------------------------- */
-.home{
-    display: none;
-    opacity: 0;
-}
-
 .contents{
     width: 1100px;
-    height: 2319px;
     position: relative;
     margin: 200px auto 0;
-    /* display: none; */
-    overflow: hidden;
 }
 .rectLogo{
     position: absolute;
@@ -254,7 +247,7 @@ header h1 img{
 .webApp{
     width: 100%;
     height: 411px;
-    top: 120px;
+    margin-top: 120px;
     position: relative;
 }
 .webAppLogo{
@@ -300,7 +293,7 @@ header h1 img{
 .game{
     width: 100%;
     height: 332px;
-    top: 220px;
+    margin-top: 120px;
     position: relative;
 }
 .gameLogo{
@@ -344,7 +337,7 @@ header h1 img{
 .graphic{
     width: 100%;
     height: 271px;
-    top: 320px;
+    margin-top: 120px;
     position: relative;
 }
 .graphicLogo{
@@ -383,14 +376,14 @@ header h1 img{
     line-height: 25pt;
     text-align: right;
     position: absolute;
-    top: 215px;
+    margin-top: 215px;
     right: 371px;
 }
 /* other */
 .other{
     width: 100%;
     height: 289px;
-    top: 420px;
+    margin-top: 120px;
     position: relative;
 }
 .otherLogo{
@@ -437,7 +430,7 @@ header h1 img{
 .footer{
     width: 100%;
     height: 309px;
-    margin-top: 100px;
+    margin-top: 120px;
     background-color: #F2F2F2;
     overflow: hidden;
 }
