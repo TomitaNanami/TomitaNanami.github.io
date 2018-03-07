@@ -30,7 +30,7 @@ body {
 
 .wrap-loader {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #FFF;
   position: absolute;
   z-index: 500;
@@ -436,60 +436,47 @@ header h1 img{
 }
 .footer-right-container{
     width: 240px;
+    float: right;
+    margin-right: 138px;
+    margin-top: 67px;
 }
 .footer-right{
     width: 100%;
-    float: right;
-    margin-right: 138px;
     font-family: 'Allerta', sans-serif;
     font-size: 12px;
     color: #000;
+    text-align: right;
     line-height: 14pt;
 }
 .menuPuzzle{
-    position: absolute;
-    margin-top: 68px;
-    right: 138px;
+    margin-bottom: 10px;
 }
 .menuHome{
-    position: absolute;
-    margin-top: 90px;
-    right: 138px;
+    margin-bottom: 10px;
 }
 .menuWebApp{
-    position: absolute;
-    margin-top: 111px;
-    right: 138px;
+    margin-bottom: 10px;
 }
 .menuGame{
-    position: absolute;
-    margin-top: 132px;
-    right: 138px;
+    margin-bottom: 10px;
 }
 .menuGraphic{
-    position: absolute;
-    margin-top: 153px;
-    right: 138px;
+    margin-bottom: 10px;
 }
 .menuOther{
-    position: absolute;
-    margin-top: 174px;
-    right: 138px;
+    margin-bottom: 28px;
 }
 .copyright{
-    position: absolute;
-    margin-top: 226px;
-    right: 138px;
 }
 
 .footer-left-container{
     width: 280px;
-}
-.footer-left{
-    width: 100%;
     float: left;
     margin-left: 138px;
     margin-top: 67px;
+}
+.footer-left{
+    width: 100%;
     font-family: 'Allerta', sans-serif;
     font-size: 12px;
     color: #000;
@@ -952,7 +939,8 @@ header h1 img{
     width: 100%;
     height: 100vh;
     background-color: #000;
-    position: relative;
+    position: fixed;
+    top: 0;
     z-index: 500;
     opacity: 0;
     display: none;
@@ -1065,7 +1053,7 @@ header h1 img{
 .middle-container{
     width: 100%;
     position: absolute;
-    margin: 0 auto;
+    margin: 90px auto 0;
     top: 200px;
 }
 .w-topPuzzle{

@@ -136,19 +136,24 @@ $(function(){
                 moveS();
             });
         }
-        stage.update();
+
+		createjs.Tween.get(earth, {loop:true}).to({rotation: -360}, 100000);
+		createjs.Tween.get(inbg, {loop:true}).to({rotation: -360}, 100000);
+		createjs.Tween.get(outbg, {loop:true}).to({rotation: -360}, 100000);
+
+		stage.update();
+
+
+	  	createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+	  	createjs.Ticker.setFPS(30);
+	    createjs.Ticker.addEventListener('tick',function(){
+
+	        // earth.rotation -= 0.3;
+			// inbg.rotation += 0.15;
+			// outbg.rotation += 0.2;
+	        stage.update();
+	    })
     }
-
-  	createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
-  	createjs.Ticker.setFPS(30);
-    createjs.Ticker.addEventListener('tick',function(){
-
-        earth.rotation -= 0.3;
-		inbg.rotation += 0.15;
-		outbg.rotation += 0.2;
-        stage.update();
-    })
-
 
 
 
