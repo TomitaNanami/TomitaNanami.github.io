@@ -131,6 +131,7 @@ $(function(){
 
     function startScene(){
         wLoader.addClass('fade-out');
+        $('.footer').css('display','block');
         setTimeout(function(){
             wLoader.remove();
         },1500)

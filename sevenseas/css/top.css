@@ -433,6 +433,7 @@ header h1 img{
     margin-top: 120px;
     background-color: #F2F2F2;
     overflow: hidden;
+    display: none;
 }
 .footer-right-container{
     width: 240px;
