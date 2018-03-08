@@ -313,7 +313,7 @@ header nav ul li a.current{
     box-shadow: 4px 2px 4px 0 rgba(0,0,0,0.5);
 }
 
-@media (max-width:767px){
+@media (max-width:769px){
     .works-container{
         display: block; /* flexの解除 */
     }
@@ -393,7 +393,7 @@ header nav ul li a.current{
     font-size: 13px;
 }
 
-@media (max-width:767px){
+@media (max-width:769px){
     .news-container{
         width: 100%;
         display: block; /* flexの解除 */
@@ -455,7 +455,7 @@ footer p small{
     color:#666;
 }
 
-@media (max-width:767px){
+@media (max-width:769px){
     .footer-gnav{
         width: 100%;
         margin: 0 0 24px;
