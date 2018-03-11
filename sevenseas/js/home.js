@@ -14,14 +14,23 @@ $(function(){
 
 
     //メニュー開いたり閉じたり
-    $('.right-menu').on('click',function(){
-        $('header nav').addClass('right-menu-open').addClass('fade-in');
-        $('.right-menu').css('opacity',0);
-    });
-    $('.right-close').on('click',function(){
-        $('header nav').removeClass('right-menu-open').removeClass('fade-in');
-        $('.right-menu').css('opacity',1);
-    });
+	function setContent(){
+        $('.header-container').find('.menu').on('click',function(){
+            console.log('くりっく');
+
+            $('.menu-container').css('display','block').removeClass('fade-out').addClass('fade-in');
+        });
+
+
+        $('.w-menu').on('click',function(){
+            console.log('くりっく2');
+
+            $('.menu-container').removeClass('fade-in').addClass('fade-out');
+            setTimeout(function(){
+                $('.menu-container').removeClass('fade-in').css('display','none');
+            },1000);
+        });
+    }
 
 
 

@@ -439,7 +439,7 @@ header h1 img{
     width: 240px;
     float: right;
     margin-right: 138px;
-    margin-top: 67px;
+    margin-top: 60px;
 }
 .footer-right{
     width: 100%;
@@ -450,22 +450,22 @@ header h1 img{
     line-height: 14pt;
 }
 .menuPuzzle{
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 .menuHome{
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 .menuWebApp{
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 .menuGame{
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 .menuGraphic{
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 .menuOther{
-    margin-bottom: 28px;
+    margin-bottom: 36px;
 }
 .copyright{
 }
@@ -474,23 +474,31 @@ header h1 img{
     width: 280px;
     float: left;
     margin-left: 138px;
-    margin-top: 67px;
+    margin-top: 60px;
 }
 .footer-left{
     width: 100%;
     font-family: 'Allerta', sans-serif;
     font-size: 12px;
+    line-height: 12pt;
+}
+.footer-left p{
     color: #000;
-    line-height: 14pt;
 }
 .myName{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 .myBirthDay{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 .carrier{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
+}
+.skill{
+    margin-bottom: 20px;
+}
+.download p{
+    color: #7d7d7d;
 }
 
 

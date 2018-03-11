@@ -464,3 +464,224 @@ header h1 img{
         transform-origin: right;
     }
 }
+
+
+
+
+
+/* メニュー出てきた図のコンテナ---------------------------------------- */
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+}
+/* タイトルとメニューのコンテナ */
+.up-container{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.w-title{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px
+}
+.w-title img{
+    width: 198px;
+    height: 24px;
+}
+.w-menu{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+}
+.w-menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* 左のサブタイトル */
+.side-container-left{
+    width: 9px;
+    height: 219px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.side-container-left img{
+    width: 9px;
+    height: 219px;
+}
+/* 右のリンクたち */
+.side-container-right {
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+.w-facebook{
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.w-facebook img{
+    width: 8px;
+    height: 14px;
+}
+.w-behance{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.w-behance img{
+    width: 17px;
+    height: 11px;
+}
+.w-instagram{
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+}
+.w-instagram img{
+    width: 14px;
+    height: 14px;
+}
+.w-bar{
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.w-bar img{
+    width: 2px;
+    height: 41px;
+}
+.w-contact{
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.w-contact img{
+    width: 9px;
+    height: 67px;
+}
+
+/* 各ページのリンク------------------------------------ */
+.middle-container{
+    width: 100%;
+    position: absolute;
+    margin: 90px auto 0;
+    top: 200px;
+}
+.w-topPuzzle{
+    width: 141px;
+    height: auto;
+    margin: 0 auto;
+}
+/* .w-topPuzzle {
+    width: 141px;
+    height: auto;
+    margin: 33px auto 0;
+} */
+.w-topPuzzle img{
+    width: 141px;
+    height: auto;
+}
+.w-home{
+    width: 64px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-home img{
+    width: 64px;
+    height: auto;
+}
+.w-webApp{
+    width: 121px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-webApp img{
+    width: 121px;
+    height: auto;
+}
+.w-game{
+    width: 63px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-game img{
+    width: 63px;
+    height: auto;
+}
+.w-graphic{
+    width: 95px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-graphic img{
+    width: 95px;
+    height: auto;
+}
+.w-other{
+    width: 74px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-other img{
+    width: 74px;
+    height: auto;
+}
+
+
+
+
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 5s; */
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
