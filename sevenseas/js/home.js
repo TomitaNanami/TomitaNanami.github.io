@@ -14,7 +14,7 @@ $(function(){
 
 
     //メニュー開いたり閉じたり
-	function setContent(){
+
         $('.header-container').find('.menu').on('click',function(){
             console.log('くりっく');
 
@@ -30,7 +30,7 @@ $(function(){
                 $('.menu-container').removeClass('fade-in').css('display','none');
             },1000);
         });
-    }
+
 
 
 
