@@ -1,0 +1,63 @@
+header{
+    width: 1140px;
+    height: 364px;
+    top: 50px;
+    left: 50%;
+    /* margin-left: 570px; */
+    /* position: fixed; */
+}
+header img{
+    width: 1140px;
+    height: 364px;
+}
+.koma{
+    width: 1140px;
+    height: auto;
+    margin: 0 auto;
+}
+.koma1{
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+    top: 640px;
+}
+.koma1 img{
+    width: 1140px;
+    height: 750px;
+}
+.koma2{
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+}
+.koma2 img{
+    width: 1140px;
+    height: 750px;
+}
+.koma3{
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+}
+.koma3 img{
+    width: 1140px;
+    height: 750px;
+}
+.koma4{
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+}
+.koma4 img{
+    width: 1140px;
+    height: 750px;
+}
+.koma5{
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+}
+.koma5 img{
+    width: 1140px;
+    height: 750px;
+}
