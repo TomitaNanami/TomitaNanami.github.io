@@ -147,8 +147,8 @@ $(function(){
         }
 
 		createjs.Tween.get(earth, {loop:true}).to({rotation: -360}, 100000);
-		createjs.Tween.get(inbg, {loop:true}).to({rotation: -360}, 100000);
-		createjs.Tween.get(outbg, {loop:true}).to({rotation: -360}, 100000);
+		createjs.Tween.get(inbg, {loop:true}).to({rotation: -360}, 200000);
+		createjs.Tween.get(outbg, {loop:true}).to({rotation: -360}, 300000);
 
 		stage.update();
 

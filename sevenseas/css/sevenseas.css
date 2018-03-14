@@ -1,0 +1,765 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+    background-color: #FFF;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+
+
+/* header------------------------------------ */
+.header-container{
+    position: fixed;
+    width: 100%;
+    height: 124px;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+header h1{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px;
+}
+header h1 img{
+    width: 198px;
+    height: 24px;
+}
+.menu{
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    cursor: pointer;
+}
+.menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* side bar */
+.header-left{
+    position: absolute;
+    left: 0;
+    top: 300px;
+    left: 50px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
+
+
+/* header(mobile) */
+/* @media (max-width:835px){
+    .header-container{
+        width: 100%;
+        height: 100px;
+        background: rgba(55,255,255,0.98);
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+    }
+    header h1{
+        width: 198px;
+        height: 24px;
+        position: absolute;
+        top: 37px;
+        left: 50px;
+    }
+    header h1 img{
+        width: 198px;
+        height: 24px;
+    }
+    .menu{
+        width: 25px;
+        height: 18px;
+        position: absolute;
+        top: 39px;
+        right: 50px;
+    }
+    .menu img{
+        width: 25px;
+        height: auto;
+    }
+    .header-left{
+        display: none;
+    }
+    .header-right{
+        display: none;
+    }
+} */
+
+
+
+
+
+
+/* ****************************** */
+
+.contents-container{
+    width: 1100px;
+    height: 4770px;
+    margin: 120px auto 0;
+}
+.contents{
+    width: 100%;
+    height: 4500px;
+    position: relative;
+}
+
+
+
+.txt{
+    width: 420px;
+    position: absolute;
+    left: 680px;
+    top: 120px;
+}
+.title{
+    font-family: 'Allerta', sans-serif;
+    font-size:25px;
+    margin-bottom: 20px;
+}
+.production{
+    font-family: 'Allerta', sans-serif;
+    font-size:16px;
+    margin-bottom: 45px;
+}
+.skill{
+    font-family: 'Allerta', sans-serif;
+    font-size:12px;
+    margin-bottom: 20px;
+}
+.description{
+    font-size:12px;
+    line-height: 14pt;
+    font-family:-apple-system, BlinkMacSystemFont,"Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    margin-bottom: 20px;
+}
+.remarks{
+    font-size:12px;
+    line-height: 17pt;
+    font-family:-apple-system, BlinkMacSystemFont,"Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+/* ************************ */
+.photo-container{
+    width: 655px;
+    height: 3324px;
+    position: relative;
+}
+.photo1 {
+    width: 655px;
+    height: 479px;
+    top: 120px;
+    margin-bottom: 75px;
+}
+.photo1 img{
+    width: 655px;
+    height: 479px;
+}
+.box1{
+    width: 655px;
+    height: 479px;
+    background-color: #eff3ca;
+    position: absolute;
+    top: 0px;
+}
+.photo2{
+    width: 655px;
+    height: 611px;
+    margin-bottom: 75px;
+}
+.photo2 img{
+    width: 655px;
+    height: auto;
+    z-index: 0;
+}
+.box2{
+    width: 655px;
+    height: 611px;
+    background-color: #b9cfe6;
+    position: absolute;
+    top: 554px;
+    z-index: 100;
+}
+.photo3{
+    width: 655px;
+    height: 1387px;
+    margin-bottom: 75px;
+}
+.photo3 img{
+    width: 655px;
+    height: 1387px;
+}
+.box3{
+    width: 655px;
+    height: 1387px;
+    background-color: #fff5bd;
+    position: absolute;
+    top: 1240px;
+    z-index: 100;
+}
+.photo4{
+    width: 655px;
+    height: 792px;
+    margin-bottom: 75px;
+}
+.photo4 img{
+    width: 655px;
+    height: 792px;
+}
+.box4{
+    width: 655px;
+    height: 792px;
+    background-color: #bde1db;
+    position: absolute;
+    top: 2702px;
+    z-index: 100;
+}
+.photo5{
+    width: 655px;
+    height: 931px;
+}
+.photo5 img{
+    width: 655px;
+    height: 931px;
+}
+.box5{
+    width: 655px;
+    height: 931px;
+    background-color: #fde7c1;
+    position: absolute;
+    top: 3569px;
+    z-index: 100;
+}
+
+
+/* contents(mobile) */
+/* @media (max-width:835px) {
+    .photo-container{
+        width: 100vw;
+        height: auto;
+        position: relative;
+    }
+    .photo1 {
+        width: 100vw;
+        height: auto;
+        margin-top: -20px;
+        margin-bottom: 0;
+    }
+    .photo1 img{
+        width: 100vw;
+        height: auto;
+    }
+    .box0{
+        width: 100vw;
+        height: auto;
+        background-color: #BDE1DB;
+        position: absolute;
+        top: 0px;
+        z-index: 10;
+    }
+    .txt{
+        position: static;
+        margin-top: 32px;
+        margin-left: 34px;
+    }
+    .youtube-movie{
+        position: relative;
+        padding-top:56.25%;
+        width: 85%;
+        height: auto;
+        margin: 75px auto 75px;
+    }
+    .youtube-movie iframe{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .photo2{
+        width: 85%;
+        height: auto;
+        margin: 0 auto 75px;
+    }
+    .photo2 img{
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+} */
+
+
+/* ************************* */
+
+.transition{
+    width: 656px;
+    height: 151px;
+    display: flex;
+    justify-content: space-between;
+    left: 138px;
+    margin-top: 120px;
+}
+.pointer{
+    width: 210px;
+    height: 49px;
+    display: flex;
+    justify-content: space-between;
+}
+.preview img{
+    width: 150px;
+    height: 150px;
+}
+.next img{
+    width: 150px;
+    height: 150px;
+}
+
+.left-container{
+    width: 14px;
+    height: 23px;
+    margin-top: 62px;
+}
+.left img{
+    width: 14px;
+    height: 23px;
+}
+.center-container{
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+}
+.center img{
+    width: 50px;
+    height: 50px;
+}
+.right-container{
+    width: 14px;
+    height: 23px;
+    margin-top: 62px;
+}
+.right img{
+    width: 14px;
+    height: 23px;
+}
+
+/* footer---------- */
+.footer{
+    width: 100%;
+    height: 309px;
+    margin-top: 100px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+.footer-right-container{
+    width: 240px;
+    float: right;
+    margin-right: 138px;
+    margin-top: 60px;
+}
+.footer-right{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-align: right;
+    line-height: 14pt;
+}
+.menuPuzzle{
+    margin-bottom: 11px;
+}
+.menuHome{
+    margin-bottom: 11px;
+}
+.menuWebApp{
+    margin-bottom: 11px;
+}
+.menuGame{
+    margin-bottom: 11px;
+}
+.menuGraphic{
+    margin-bottom: 11px;
+}
+.menuOther{
+    margin-bottom: 36px;
+}
+.copyright{
+}
+
+
+.footer-left-container{
+    width: 280px;
+    float: left;
+    margin-left: 138px;
+    margin-top: 60px;
+}
+.footer-left{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 12pt;
+}
+.footer-left p{
+    color: #000;
+}
+.myName{
+    margin-bottom: 7px;
+}
+.myBirthDay{
+    margin-bottom: 7px;
+}
+.carrier{
+    margin-bottom: 7px;
+}
+.skill{
+    margin-bottom: 20px;
+}
+.download p{
+    color: #7d7d7d;
+}
+
+
+
+
+
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+
+
+
+
+
+/* メニュー出てきた図のコンテナ---------------------------------------- */
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+}
+/* タイトルとメニューのコンテナ */
+.up-container{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.w-title{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px
+}
+.w-title img{
+    width: 198px;
+    height: 24px;
+}
+.w-menu{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    cursor: pointer;
+}
+.w-menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* 左のサブタイトル */
+.side-container-left{
+    width: 9px;
+    height: 219px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.side-container-left img{
+    width: 9px;
+    height: 219px;
+}
+/* 右のリンクたち */
+.side-container-right {
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+.w-facebook{
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.w-facebook img{
+    width: 8px;
+    height: 14px;
+}
+.w-behance{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.w-behance img{
+    width: 17px;
+    height: 11px;
+}
+.w-instagram{
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+}
+.w-instagram img{
+    width: 14px;
+    height: 14px;
+}
+.w-bar{
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.w-bar img{
+    width: 2px;
+    height: 41px;
+}
+.w-contact{
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.w-contact img{
+    width: 9px;
+    height: 67px;
+}
+
+/* 各ページのリンク------------------------------------ */
+.middle-container{
+    width: 100%;
+    position: absolute;
+    margin: 90px auto 0;
+    top: 183px;
+}
+.w-topPuzzle{
+    width: 141px;
+    height: auto;
+    margin: 0 auto;
+}
+/* .w-topPuzzle {
+    width: 141px;
+    height: auto;
+    margin: 33px auto 0;
+} */
+.w-topPuzzle img{
+    width: 141px;
+    height: auto;
+}
+.w-home{
+    width: 64px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-home img{
+    width: 64px;
+    height: auto;
+}
+.w-webApp{
+    width: 121px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-webApp img{
+    width: 121px;
+    height: auto;
+}
+.w-game{
+    width: 63px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-game img{
+    width: 63px;
+    height: auto;
+}
+.w-graphic{
+    width: 95px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-graphic img{
+    width: 95px;
+    height: auto;
+}
+.w-other{
+    width: 74px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-other img{
+    width: 74px;
+    height: auto;
+}
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 5s; */
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}

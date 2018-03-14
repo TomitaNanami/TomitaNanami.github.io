@@ -130,6 +130,7 @@ header h1 img{
     position: absolute;
     top: 28px;
     right: 50px;
+    cursor: pointer;
 }
 .menu img{
     width: 25px;
@@ -977,6 +978,7 @@ header h1 img{
     position: absolute;
     top: 28px;
     right: 50px;
+    cursor: pointer;
 }
 .w-menu img{
     width: 25px;
@@ -1063,18 +1065,13 @@ header h1 img{
     width: 100%;
     position: absolute;
     margin: 90px auto 0;
-    top: 200px;
+    top: 183px;
 }
 .w-topPuzzle{
     width: 141px;
     height: auto;
     margin: 0 auto;
 }
-/* .w-topPuzzle {
-    width: 141px;
-    height: auto;
-    margin: 33px auto 0;
-} */
 .w-topPuzzle img{
     width: 141px;
     height: auto;

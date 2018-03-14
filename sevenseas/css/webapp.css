@@ -44,6 +44,7 @@ header h1 img{
     position: absolute;
     top: 28px;
     right: 50px;
+    cursor: pointer;
 }
 .menu img{
     width: 25px;
@@ -176,6 +177,27 @@ header h1 img{
     width: 315px;
     height: 315px;
 }
+.box1{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #bde1db;
+    top: 122px;
+}
+.box2{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #dacae1;
+    top: 122px;
+}
+.box3{
+    width: 315px;
+    height: 315px;
+    position: absolute;
+    background-color: #fde7c1;
+    top: 122px;
+}
 
 
 
@@ -237,93 +259,326 @@ header h1 img{
 }
 .footer-right-container{
     width: 240px;
+    float: right;
+    margin-right: 138px;
+    margin-top: 60px;
 }
 .footer-right{
     width: 100%;
-    float: right;
-    margin-right: 138px;
     font-family: 'Allerta', sans-serif;
     font-size: 12px;
+    color: #000;
+    text-align: right;
     line-height: 14pt;
 }
 .menuPuzzle{
-    position: absolute;
-    margin-top: 68px;
-    right: 138px;
+    margin-bottom: 11px;
 }
 .menuHome{
-    position: absolute;
-    margin-top: 90px;
-    right: 138px;
+    margin-bottom: 11px;
 }
-/* .menuHome img{
-    width: 30px;
-    height: 9px;
-} */
 .menuWebApp{
-    position: absolute;
-    margin-top: 111px;
-    right: 138px;
+    margin-bottom: 11px;
 }
-/* .menuWebApp img{
-    width: 52px;
-    height: 9px;
-} */
 .menuGame{
-    position: absolute;
-    margin-top: 132px;
-    right: 138px;
+    margin-bottom: 11px;
 }
-/* .menuGame img{
-    width: 29px;
-    height: 9px;
-} */
 .menuGraphic{
-    position: absolute;
-    margin-top: 153px;
-    right: 138px;
+    margin-bottom: 11px;
 }
-/* .menuGraphic img{
-    width: 46px;
-    height: 9px;
-} */
 .menuOther{
-    position: absolute;
-    margin-top: 174px;
-    right: 138px;
+    margin-bottom: 36px;
 }
-/* .menuOther img{
-    width: 36px;
-    height: 9px;
-} */
 .copyright{
-    position: absolute;
-    margin-top: 226px;
-    right: 138px;
 }
-/* .copyright img{
-    width: 180px;
-    height: 9px;
-} */
 
 .footer-left-container{
     width: 280px;
+    float: left;
+    margin-left: 138px;
+    margin-top: 60px;
 }
 .footer-left{
     width: 100%;
-    float: left;
-    margin-left: 138px;
-    margin-top: 67px;
     font-family: 'Allerta', sans-serif;
     font-size: 12px;
-    line-height: 14pt;
+    line-height: 12pt;
+}
+.footer-left p{
+    color: #000;
 }
 .myName{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 .myBirthDay{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 .carrier{
-    margin-bottom: 12px;
+    margin-bottom: 7px;
+}
+.skill{
+    margin-bottom: 20px;
+}
+.download p{
+    color: #7d7d7d;
+}
+
+
+
+/* メニュー出てきた図のコンテナ---------------------------------------- */
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+}
+/* タイトルとメニューのコンテナ */
+.up-container{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.w-title{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px
+}
+.w-title img{
+    width: 198px;
+    height: 24px;
+}
+.w-menu{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    cursor: pointer;
+}
+.w-menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* 左のサブタイトル */
+.side-container-left{
+    width: 9px;
+    height: 219px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.side-container-left img{
+    width: 9px;
+    height: 219px;
+}
+/* 右のリンクたち */
+.side-container-right {
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+.w-facebook{
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.w-facebook img{
+    width: 8px;
+    height: 14px;
+}
+.w-behance{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.w-behance img{
+    width: 17px;
+    height: 11px;
+}
+.w-instagram{
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+}
+.w-instagram img{
+    width: 14px;
+    height: 14px;
+}
+.w-bar{
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.w-bar img{
+    width: 2px;
+    height: 41px;
+}
+.w-contact{
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.w-contact img{
+    width: 9px;
+    height: 67px;
+}
+
+/* 各ページのリンク------------------------------------ */
+.middle-container{
+    width: 100%;
+    position: absolute;
+    margin: 90px auto 0;
+    top: 183px;
+}
+.w-topPuzzle{
+    width: 141px;
+    height: auto;
+    margin: 0 auto;
+}
+/* .w-topPuzzle {
+    width: 141px;
+    height: auto;
+    margin: 33px auto 0;
+} */
+.w-topPuzzle img{
+    width: 141px;
+    height: auto;
+}
+.w-home{
+    width: 64px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-home img{
+    width: 64px;
+    height: auto;
+}
+.w-webApp{
+    width: 121px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-webApp img{
+    width: 121px;
+    height: auto;
+}
+.w-game{
+    width: 63px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-game img{
+    width: 63px;
+    height: auto;
+}
+.w-graphic{
+    width: 95px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-graphic img{
+    width: 95px;
+    height: auto;
+}
+.w-other{
+    width: 74px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-other img{
+    width: 74px;
+    height: auto;
+}
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 5s; */
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+
+
+/* スクロールアニメーション */
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
 }
