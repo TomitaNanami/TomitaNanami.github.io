@@ -646,16 +646,19 @@ header h1 img{
     width: 550px;
     height: 212px;
     background-image: url(../img/top/l1-a.png);
+    background-size: 550px 212px;
 }
 #photos1 li:nth-child(2){
     width: 550px;
     height: 212px;
     background-image: url(../img/top/l1-c.png);
+    background-size: 550px 212px;
 }
 #photos1 li:nth-child(3){
     width: 550px;
     height: 212px;
     background-image: url(../img/top/l1-g.png);
+    background-size: 550px 212px;
 }
 #rightBtn1 {
     width: 550px;
