@@ -1,0 +1,1174 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+p{
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+/* preload----------------------------------------------------- */
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "游ゴシック Medium", "Yu Gothic", YuGothic, YuGothicMedium, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.8;
+  color: #FFF;
+}
+
+.wrap-loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #f5f5f5;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #f5f5f5;
+  text-indent: -9999em;
+  margin: 400px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+
+/* header------------------------------------ */
+.header-container{
+    position: fixed;
+    width: 100%;
+    height: 124px;
+    top: 0;
+    left: 0;
+    z-index: 450;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+header h1{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px;
+}
+header h1 img{
+    width: 198px;
+    height: 24px;
+}
+.menu{
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    cursor: pointer;
+}
+.menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* side bar */
+.header-left{
+    position: absolute;
+    left: 0;
+    top: 300px;
+    left: 50px;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
+
+
+/* home (=contents)--------------------------- */
+.contents{
+    width: 1100px;
+    position: relative;
+    margin: 200px auto 0;
+}
+.rectLogo{
+    position: absolute;
+    top: 144px;
+    left: 723px;
+    z-index: 2;
+}
+.rectLogo img{
+    width: 231px;
+    height: 231px;
+}
+
+
+/* 地球 create.js canvas */
+.earth{
+    position: relative;
+}
+.earth-canvas img{
+    width: 788px;
+    height: 594px;
+    margin-top: -50px;
+}
+
+
+/* web&app */
+.webApp{
+    width: 100%;
+    height: 411px;
+    margin-top: 120px;
+    position: relative;
+}
+.webAppLogo{
+    width: 137px;
+    height: 139px;
+    position: absolute;
+    top: 65px;
+    right: 508px;
+    z-index: 1;
+}
+.webAppLogo img{
+    width: 118px;
+    height: 120px;
+}
+.webAppImg{
+    width: 563px;
+    height: 411px;
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+}
+.webAppImg img{
+    width: 563px;
+    height: 411px;
+}
+.box1{
+    width: 563px;
+    height: 411px;
+    background-color: #FDE7C1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.webApp p{
+    font-family: 'Allerta', sans-serif;
+    line-height: 25pt;
+    text-align: right;
+    position: absolute;
+    top: 354px;
+    right: 563px;
+}
+/* game */
+.game{
+    width: 100%;
+    height: 332px;
+    margin-top: 120px;
+    position: relative;
+}
+.gameLogo{
+    width: 172px;
+    height: 37px;
+    position: absolute;
+    top: 65px;
+    left: 383px;
+    z-index: 1;
+}
+.gameLogo img{
+    width: 147px;
+    height: 32px;
+}
+.gameImg{
+    width: 454px;
+    height: 332px;
+    position: absolute;
+    margin: 0 0;
+    z-index: 0;
+}
+.gameImg img{
+    width: 454px;
+    height: 332px;
+}
+.box2{
+    width: 454px;
+    height: 332px;
+    background-color: #FBDBC7;
+    position: absolute;
+    margin: 0 0;
+}
+.game p{
+    font-family: 'Allerta', sans-serif;
+    line-height: 25pt;
+    position: absolute;
+    top: 309px;
+    left: 454px;
+}
+/* graphic */
+.graphic{
+    width: 100%;
+    height: 271px;
+    margin-top: 120px;
+    position: relative;
+}
+.graphicLogo{
+    width: 142px;
+    height: 91px;
+    position: absolute;
+    top: 65px;
+    right: 309px;
+    z-index: 1;
+}
+.graphicLogo img{
+    width: 122px;
+    height: 78px;
+}
+.graphicImg{
+    width: 371px;
+    height: 271px;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+.graphicImg img{
+    width: 371px;
+    height: 271px;
+}
+.box3{
+    width: 371px;
+    height: 271px;
+    background-color: #B0D8E5;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.graphic p{
+    font-family: 'Allerta', sans-serif;
+    line-height: 25pt;
+    text-align: right;
+    position: absolute;
+    margin-top: 215px;
+    right: 371px;
+}
+/* other */
+.other{
+    width: 100%;
+    height: 289px;
+    margin-top: 120px;
+    position: relative;
+}
+.otherLogo{
+    width: 211px;
+    height: 37px;
+    position: absolute;
+    top: 65px;
+    left: 297px;
+    z-index: 1;
+}
+.otherLogo img{
+    width: 180px;
+    height: 32px;
+}
+.otherImg{
+    width: 395px;
+    height: 289px;
+    position: absolute;
+    margin: 0;
+    z-index: 0;
+}
+.otherImg img{
+    width: 395px;
+    height: 289px;
+}
+.box4{
+    width: 395px;
+    height: 289px;
+    background-color: #FFF5BD;
+    position: absolute;
+    margin: 0 0;
+}
+.other p{
+    font-family: 'Allerta', sans-serif;
+    line-height: 25pt;
+    position: absolute;
+    top: 199px;
+    left:396px;
+}
+
+
+
+/* footer------------------------------------ */
+.footer{
+    width: 100%;
+    height: 309px;
+    margin-top: 120px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    display: none;
+}
+.footer-right-container{
+    width: 240px;
+    float: right;
+    margin-right: 138px;
+    margin-top: 60px;
+}
+.footer-right{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-align: right;
+    line-height: 14pt;
+}
+.menuPuzzle{
+    margin-bottom: 11px;
+}
+.menuHome{
+    margin-bottom: 11px;
+}
+.menuWebApp{
+    margin-bottom: 11px;
+}
+.menuGame{
+    margin-bottom: 11px;
+}
+.menuGraphic{
+    margin-bottom: 11px;
+}
+.menuOther{
+    margin-bottom: 36px;
+}
+.copyright{
+}
+
+.footer-left-container{
+    width: 280px;
+    float: left;
+    margin-left: 138px;
+    margin-top: 60px;
+}
+.footer-left{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 12pt;
+}
+.footer-left p{
+    color: #000;
+}
+.myName{
+    margin-bottom: 7px;
+}
+.myBirthDay{
+    margin-bottom: 7px;
+}
+.carrier{
+    margin-bottom: 7px;
+}
+.skill{
+    margin-bottom: 20px;
+}
+.download p{
+    color: #7d7d7d;
+}
+
+
+/* スクロールアニメーション */
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.puzzle{
+    /* background: #FFF url(../img/top/logo.png) center 310px no-repeat; */
+    /* background-size: 252px auto; */
+    position: absolute;
+    width: 100%;
+    /* height: 760px; */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 200;
+}
+.whiteRect{
+    width: 252px;
+    height: 252px;
+    position: absolute;
+    left: 50%;
+    top: 128px;
+    margin-left: -126px;
+    margin-top: 187px;
+    z-index: 270;
+}
+.close-container{
+    position: absolute;
+    left: 50%;
+    margin-left: -126px;
+    z-index: 220;
+}
+.close{
+    width: 252px;
+    height: 252px;
+}
+.open-container{
+    position: absolute;
+    left: 50%;
+    margin-left: -126px;
+    z-index: 215;
+    /* display: none; */
+}
+.open{
+    width: 252px;
+    height: 252px;
+}
+.rectLogo-container{
+    position: absolute;
+    left: 50%;
+    top: 124px;
+    margin-left: -126px;
+    z-index: 210;
+    /* display: none; */
+}
+.rectLogo{
+    width: 252px;
+    height: 252px;
+}
+
+#slider-container{
+    width: 100%;
+    height: 636px;
+    margin: 124px auto 0;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+#slider135-container{
+    width: 550px;
+    height: 684px;
+    position: absolute;
+    right: 50%;
+    /* float: left;
+    overflow: hidden; */
+}
+
+#slider-container1{
+    float: left;
+}
+#slider1{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos1{
+    width: 3300px;
+    position: relative;
+}
+#photos1 ul{
+    float: left;
+}
+#photos1 li{
+    float: left;
+}
+#photos1 li:nth-child(1){
+    width: 550px;
+    height: 212px;
+    background-image: url(../img/top/l1-a.png);
+}
+#photos1 li:nth-child(2){
+    width: 550px;
+    height: 212px;
+    background-image: url(../img/top/l1-c.png);
+}
+#photos1 li:nth-child(3){
+    width: 550px;
+    height: 212px;
+    background-image: url(../img/top/l1-g.png);
+}
+#rightBtn1 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 260;
+}
+
+#slider-container3{
+    float: left;
+}
+#slider3{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos3{
+    position: absolute;
+    width: 3300px;
+}
+#photos3 ul{
+    float: left;
+}
+#photos3 li{
+    float: left;
+}
+#rightBtn3 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    /* margin-top: 550; */
+    cursor: pointer;
+    z-index: 200;
+}
+
+#slider-container5{
+    float: left;
+}
+#slider5{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos5{
+    position: absolute;
+    width: 3300px;
+}
+#photos5 ul{
+    float: left;
+}
+#photos5 li{
+    float: left;
+}
+#rightBtn5 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 200;
+}
+
+
+
+#slider246-container{
+    width: 550px;
+    height: 684px;
+    position: absolute;
+    left: 50%;
+    /* float: right;
+    overflow: hidden; */
+}
+
+#slider-container2{
+    float: right;
+}
+#slider2{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos2{
+    position: absolute;
+    width: 3300px;
+}
+#photos2 ul{
+    float: left;
+}
+#photos2 li{
+    float: left;
+}
+#rightBtn2 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 200;
+}
+
+
+
+#slider-container4{
+    float: right;
+}
+#slider4{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos4{
+    position: absolute;
+    width: 3300px;
+}
+#photos4 ul{
+    float: left;
+}
+#photos4 li{
+    float: left;
+}
+#rightBtn4 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#slider-container6{
+    float: right;
+}
+#slider6{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 212px;
+}
+#photos6{
+    position: absolute;
+    width: 3300px;
+}
+#photos6 ul{
+    float: left;
+}
+#photos6 li{
+    float: left;
+}
+#rightBtn6 {
+    width: 550px;
+    height: 212px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 200;
+}
+
+
+.slider ul{
+    width: 1650px;
+    float: left;
+}
+.slider li{
+    float: left;
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX0{
+    animation-name: trX0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX1{
+    animation-name: trX1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.trX2{
+    animation-name: trX2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes trX0 {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(-550px);
+    }
+}
+@keyframes trX1 {
+    0%{
+        transform: translateX(-550px);
+
+    }
+    100%{
+        transform: translateX(-1100px);
+    }
+}
+@keyframes trX2 {
+    0%{
+        transform: translateX(-1100px);
+
+    }
+    100%{
+        transform: translateX(-1650px);
+    }
+}
+
+
+
+
+
+/* open the door--------------------------- */
+@keyframes openLeft {
+    0%{
+        right: 50%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+.openLeft{
+    animation-name: openLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes openRight {
+    0%{
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.openRight{
+    animation-name: openRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+
+
+/* logo&footer fade-out----------------------------- */
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 5s; */
+}
+.fade-out-footer{
+    animation-name: fade-out;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+
+/* footer fade-in----------------------------- */
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in-footer{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+
+/* メニュー出てきた図のコンテナ---------------------------------------- */
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+}
+/* タイトルとメニューのコンテナ */
+.up-container{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.w-title{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 26px;
+    left: 50px
+}
+.w-title img{
+    width: 198px;
+    height: 24px;
+}
+.w-menu{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    cursor: pointer;
+}
+.w-menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* 左のサブタイトル */
+.side-container-left{
+    width: 9px;
+    height: 219px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.side-container-left img{
+    width: 9px;
+    height: 219px;
+}
+/* 右のリンクたち */
+.side-container-right {
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    z-index: 700;
+}
+.w-facebook{
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.w-facebook img{
+    width: 8px;
+    height: 14px;
+}
+.w-behance{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.w-behance img{
+    width: 17px;
+    height: 11px;
+}
+.w-instagram{
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+}
+.w-instagram img{
+    width: 14px;
+    height: 14px;
+}
+.w-bar{
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.w-bar img{
+    width: 2px;
+    height: 41px;
+}
+.w-contact{
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.w-contact img{
+    width: 9px;
+    height: 67px;
+}
+
+/* 各ページのリンク------------------------------------ */
+.middle-container{
+    width: 100%;
+    position: absolute;
+    margin: 90px auto 0;
+    top: 183px;
+}
+.w-topPuzzle{
+    width: 141px;
+    height: auto;
+    margin: 0 auto;
+}
+.w-topPuzzle img{
+    width: 141px;
+    height: auto;
+}
+.w-home{
+    width: 64px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-home img{
+    width: 64px;
+    height: auto;
+}
+.w-webApp{
+    width: 121px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-webApp img{
+    width: 121px;
+    height: auto;
+}
+.w-game{
+    width: 63px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-game img{
+    width: 63px;
+    height: auto;
+}
+.w-graphic{
+    width: 95px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-graphic img{
+    width: 95px;
+    height: auto;
+}
+.w-other{
+    width: 74px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-other img{
+    width: 74px;
+    height: auto;
+}
+
+
+
+
+
+/* @keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+} */
