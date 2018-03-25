@@ -29,7 +29,7 @@ var manifest = [
     {src: 'img/top/r3-b.png'},
     {src: 'img/top/r3-d.png'},
     {src: 'img/top/r3-f.png'},
-    {src: 'img/top/r3-h.png'} , //23 使用しない
+    {src: 'img/top/r3-h.png'}, //23 使用しない
     //canbas
     {src: 'img/homevis/earth.png'},
     {src: 'img/homevis/nanami2.png'},

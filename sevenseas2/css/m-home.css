@@ -1,0 +1,693 @@
+
+body{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont,'Allerta' "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+
+
+/* header------------------------------------ */
+.header-container{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+header h1{
+    width: 198px;
+    height: 24px;
+    position: absolute;
+    top: 27px;
+    left: 25px;
+}
+header h1 img{
+    width: 160px;
+}
+.menu{
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    cursor: pointer;
+}
+.menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* side bar */
+.header-left{
+    position: absolute;
+    left: 0;
+    top: 300px;
+    left: 50px;
+    display: none;
+}
+.header-left img{
+    width: 9px;
+    height: 219px;
+}
+.header-right{
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    display: none;
+}
+.heaer-right ul{
+    width: 10px;
+    height: 217px;
+}
+.header-right li:nth-child(1){
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.facebook img{
+    width: 8px;
+    height: 14px;
+}
+.header-right li:nth-child(2){
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.behance img{
+    width: 17px;
+    height: 11px;
+}
+.header-right li:nth-child(3){
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+}
+.instagram img{
+    width: 14px;
+    height: 14px;
+}
+.header-right li:nth-child(4){
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.bar img{
+    width: 2px;
+    height: 41px;
+}
+.header-right li:nth-child(5){
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.contact img{
+    width: 9px;
+    height: 67px;
+}
+
+
+/* home (=contents)--------------------------- */
+.contents{
+    width: 375px;
+    height: 1398px;
+    position: relative;
+    margin: 80px auto;
+}
+.rectLogo{
+    position: absolute;
+    top: 55px;
+    left: 230px;
+    z-index: 2;
+}
+.rectLogo img{
+    width: 120px;
+}
+
+
+/* 地球 create.js canvas */
+.earth{
+    position: relative;
+}
+.earth-canvas img{
+    width: 788px;
+    height: 594px;
+    margin-top: -50px;
+}
+#canvasEl{
+    width: 295px;
+    height: 222px;
+    background-color: #BDE1DB;
+}
+
+
+/* web&app */
+.webApp{
+    width: 100%;
+    height: 256px;
+    top: 70px;
+    position: relative;
+}
+.webAppLogo{
+    width: 70px;
+    height: 71px;
+    position: absolute;
+    top: 55px;
+    right: 240px;
+    z-index: 1;
+}
+.webAppLogo img{
+    width: 70px;
+    height: 71px;
+}
+.webAppImg{
+    width: 260px;
+    height: 190px;
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+}
+.webAppImg img{
+    width: 260px;
+    height: 190px;
+}
+.box1{
+    width: 260px;
+    height: 190px;
+    background-color: #FDE7C1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.webApp p{
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 17pt;
+    text-align: right;
+    position: absolute;
+    top: 200px;
+    right: 10px;
+}
+/* game */
+.game{
+    width: 100%;
+    height: 207px;
+    top: 125px;
+    position: relative;
+}
+.gameLogo{
+    width: 100px;
+    height: 21px;
+    position: absolute;
+    top: 45px;
+    left: 210px;
+    z-index: 1;
+}
+.gameLogo img{
+    width: 100px;
+    height: 21px;
+}
+.gameImg{
+    width: 240px;
+    height: 175px;
+    position: absolute;
+    margin: 0 0;
+    z-index: 0;
+}
+.gameImg img{
+    width: 240px;
+    height: 175px;
+}
+.box2{
+    width: 240px;
+    height: 175px;
+    background-color: #FBDBC7;
+    position: absolute;
+    margin: 0 0;
+}
+.game p{
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 17pt;
+    position: absolute;
+    top: 185px;
+    left: 10px;
+}
+/* graphic */
+.graphic{
+    width: 100%;
+    height: 233px;
+    top: 187px;
+    position: relative;
+}
+.graphicLogo{
+    width: 70px;
+    height: 45px;
+    position: absolute;
+    top: 55px;
+    right: 207px;
+    z-index: 1;
+}
+.graphicLogo img{
+    width: 70px;
+    height: 45px;
+}
+.graphicImg{
+    width: 230px;
+    height: 168px;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+.graphicImg img{
+    width: 230px;
+    height: 168px;
+}
+.box3{
+    width: 230px;
+    height: 168px;
+    background-color: #B0D8E5;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.graphic p{
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 17pt;
+    text-align: right;
+    position: absolute;
+    top: 178px;
+    right: 10px;
+}
+/* other */
+.other{
+    width: 100%;
+    height: 230px;
+    top: 248px;
+    position: relative;
+}
+.otherLogo{
+    width: 100px;
+    height: 18px;
+    position: absolute;
+    top: 38px;
+    left: 169px;
+    z-index: 1;
+}
+.otherLogo img{
+    width: 100px;
+    height: 18px;
+}
+.otherImg{
+    width: 220px;
+    height: 161px;
+    position: absolute;
+    margin: 0;
+    z-index: 0;
+}
+.otherImg img{
+    width: 220px;
+    height: 161px;
+}
+.box4{
+    width: 220px;
+    height: 161px;
+    background-color: #FFF5BD;
+    position: absolute;
+    margin: 0 0;
+}
+.other p{
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 17pt;
+    position: absolute;
+    top: 171px;
+    left: 10px;
+}
+
+
+
+/* footer------------------------------------ */
+.footer{
+    width: 100%;
+    height: 309px;
+    margin-top: 40px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+.footer-right-container{
+    width: 240px;
+    float: right;
+    margin-right: 138px;
+    margin-top: 60px;
+    display: none;
+}
+.footer-right{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-align: right;
+    line-height: 14pt;
+}
+.menuPuzzle{
+    margin-bottom: 11px;
+}
+.menuHome{
+    margin-bottom: 11px;
+}
+.menuWebApp{
+    margin-bottom: 11px;
+}
+.menuGame{
+    margin-bottom: 11px;
+}
+.menuGraphic{
+    margin-bottom: 11px;
+}
+.menuOther{
+    margin-bottom: 36px;
+}
+.copyright{
+}
+
+.footer-left-container{
+    width: 280px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+.footer-left{
+    width: 100%;
+    font-family: 'Allerta', sans-serif;
+    font-size: 12px;
+    line-height: 12pt;
+}
+.footer-left p{
+    color: #000;
+}
+.myName{
+    margin-bottom: 7px;
+}
+.myBirthDay{
+    margin-bottom: 7px;
+}
+.carrier{
+    margin-bottom: 7px;
+}
+.skill{
+    margin-bottom: 20px;
+}
+.download p{
+    color: #7d7d7d;
+}
+.m-copyright{
+    margin-top: 10px;
+}
+.m-copyright p{
+    font-size: 10px;
+}
+
+
+
+/* スクロールアニメーション */
+.in-left{
+    animation-name: in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+.in-right{
+    animation-name: in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes in-left {
+    0%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes in-right {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+
+
+
+
+/* メニュー出てきた図のコンテナ---------------------------------------- */
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+}
+/* タイトルとメニューのコンテナ */
+.up-container{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+.w-title{
+    width: 160px;
+    position: absolute;
+    top: 27px;
+    left: 25px
+}
+.w-title img{
+    width: 160px;
+}
+.w-menu{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 27px;
+    right: 25px;
+    cursor: pointer;
+}
+.w-menu img{
+    width: 25px;
+    height: auto;
+}
+
+/* 左のサブタイトル */
+.side-container-left{
+    width: 9px;
+    height: 219px;
+    position: absolute;
+    top: 180px;
+    left: 25px;
+}
+.side-container-left img{
+    width: 9px;
+    height: 219px;
+}
+/* 右のリンクたち */
+.side-container-right {
+    width: 17px;
+    height: 220px;
+    position: absolute;
+    top: 180px;
+    right: 25px;
+    z-index: 700;
+}
+.w-facebook{
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.w-facebook img{
+    width: 8px;
+    height: 14px;
+}
+.w-behance{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    top: 28px;
+}
+.w-behance img{
+    width: 17px;
+    height: 11px;
+}
+.w-instagram{
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+}
+.w-instagram img{
+    width: 14px;
+    height: 14px;
+}
+.w-bar{
+    width: 2px;
+    height: 41px;
+    position: absolute;
+    top: 94px;
+    right: 8px;
+}
+.w-bar img{
+    width: 2px;
+    height: 41px;
+}
+.w-contact{
+    width: 9px;
+    height: 67px;
+    position: absolute;
+    top: 152px;
+    right: 4px;
+}
+.w-contact img{
+    width: 9px;
+    height: 67px;
+}
+
+/* 各ページのリンク------------------------------------ */
+.middle-container{
+    width: 100%;
+    position: absolute;
+    margin: 90px auto 0;
+    top: 60px;
+}
+.w-topPuzzle{
+    width: 141px;
+    height: auto;
+    margin: 0 auto;
+}
+/* .w-topPuzzle {
+    width: 141px;
+    height: auto;
+    margin: 33px auto 0;
+} */
+.w-topPuzzle img{
+    width: 141px;
+    height: auto;
+}
+.w-home{
+    width: 64px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-home img{
+    width: 64px;
+    height: auto;
+}
+.w-webApp{
+    width: 121px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-webApp img{
+    width: 121px;
+    height: auto;
+}
+.w-game{
+    width: 63px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-game img{
+    width: 63px;
+    height: auto;
+}
+.w-graphic{
+    width: 95px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-graphic img{
+    width: 95px;
+    height: auto;
+}
+.w-other{
+    width: 74px;
+    height: auto;
+    margin: 33px auto 0;
+}
+.w-other img{
+    width: 74px;
+    height: auto;
+}
+
+
+
+
+
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 5s; */
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+
+}
